@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" aria-labelledby="heroTitle">
+  <title id="heroTitle">Physical AI &amp; Humanoid Robotics</title>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#081f4a" />
+      <stop offset="100%" stop-color="#0b6efd" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop offset="0%" stop-color="#22c1c3" />
+      <stop offset="100%" stop-color="#0b6efd" />
+    </linearGradient>
+    <style>
+      .h1 { font: 700 48px/1 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial; fill: #ffffff }
+      .h2 { font: 400 24px/1.2 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial; fill: #e6f0ff }
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect width="100%" height="100%" fill="url(#bg)" />
+
+  <!-- abstract robot silhouette -->
+  <g transform="translate(140,120) scale(1.1)">
+    <g fill="none" stroke="url(#accent)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.95">
+      <path d="M400 120c0-40-32-72-72-72h-160c-40 0-72 32-72 72v64c0 40 32 72 72 72h160c40 0 72-32 72-72z" />
+      <path d="M320 312v128" />
+      <path d="M240 360h160" />
+      <path d="M176 200c-40 40-80 120-80 200" />
+      <path d="M544 200c40 40 80 120 80 200" />
+    </g>
+    <circle cx="288" cy="160" r="10" fill="#fff" />
+    <circle cx="352" cy="160" r="10" fill="#fff" />
+  </g>
+
+  <!-- headline -->
+  <g transform="translate(520,240)">
+    <text class="h1">Physical AI &amp; Humanoid Robotics</text>
+    <text class="h2" y="64">An applied guide to ROS 2, Gazebo, Unity, NVIDIA Isaac, and VLA</text>
+  </g>
+
+  <!-- footer stripe -->
+  <rect x="0" y="720" width="100%" height="80" fill="rgba(255,255,255,0.03)" />
+</svg>

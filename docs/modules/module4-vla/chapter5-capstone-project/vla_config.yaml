@@ -1,0 +1,44 @@
+system:
+  name: "VLA_Capstone_Robot"
+  version: "1.0.0"
+  debug_mode: false
+  log_level: "INFO"
+  max_workers: 4
+
+robot_interface:
+  type: "mock"
+  connection_timeout: 10.0
+  reconnection_attempts: 3
+
+perception:
+  enable_multi_camera: false
+  camera_configs: []
+  perception_rate: 10
+  confidence_threshold: 0.7
+  fusion_output_dim: 256
+  attention_heads: 8
+  num_object_classes: 10
+
+voice:
+  provider: "google"
+  language: "en-US"
+  sensitivity: 0.7
+  timeout: 5.0
+
+planning:
+  llm_model: "gpt-4"
+  max_plan_steps: 20
+  replan_threshold: 0.3
+  validation_enabled: true
+  llm_api_key: "your-openai-api-key-here"
+
+execution:
+  max_execution_time: 300
+  recovery_enabled: true
+  safety_checks: true
+
+monitoring:
+  metrics_collection: true
+  health_check_interval: 5.0
+  error_threshold: 10
+  automatic_recovery: true

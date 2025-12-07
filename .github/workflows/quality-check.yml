@@ -1,0 +1,58 @@
+name: Quality Validation Workflow
+
+on:
+  push:
+    branches: [main, 001-physical-ai-book]
+  pull_request:
+    branches: [main]
+
+jobs:
+  quality-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          pip install textstat markdown-link-check
+
+      - name: Run readability assessment
+        run: |
+          # Check readability metrics for all markdown files
+          find docs/ -name "*.md" -exec python -c "
+import textstat
+with open('{}', 'r', encoding='utf-8') as f:
+    content = f.read()
+    fk_grade = textstat.flesch_kincaid_grade(content)
+    print(f'File: {} - Flesch-Kincaid Grade Level: {fk_grade}')
+    if fk_grade < 10 or fk_grade > 12:
+        print(f'WARNING: Readability outside target range (10-12)')
+          " {} \;
+
+      - name: Check citation verification
+        run: |
+          # Verify all citations in citations.json have verification status
+          python -c "
+import json
+with open('.bibliography/citations.json', 'r') as f:
+    data = json.load(f)
+
+unverified = [c for c in data['sources'] if c['verification_status'] != 'verified']
+if unverified:
+    print(f'Found {len(unverified)} unverified citations')
+    for c in unverified:
+        print(f'  - {c[\"id\"]}: {c[\"verification_status\"]}')
+    exit(1)
+else:
+    print('All citations verified')
+          "
+
+      - name: Check for broken links
+        run: |
+          # Check for broken links in documentation
+          find docs/ -name "*.md" -exec markdown-link-check {} \;

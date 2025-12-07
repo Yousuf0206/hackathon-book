@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="240" height="64" viewBox="0 0 240 64" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title">
+  <title id="title">Physical AI Book Logo</title>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0%" stop-color="#0b6efd"/>
+      <stop offset="100%" stop-color="#22c1c3"/>
+    </linearGradient>
+    <style>
+      .t { font: 600 20px/1.1 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial; fill: #0f1724 }
+      .s { fill: url(#g) }
+    </style>
+  </defs>
+
+  <!-- stylized robot head mark -->
+  <g transform="translate(8,6)">
+    <rect x="0" y="0" width="48" height="48" rx="8" class="s" />
+    <rect x="8" y="12" width="32" height="18" rx="4" fill="#fff" opacity="0.12" />
+    <circle cx="16" cy="24" r="3" fill="#fff" />
+    <circle cx="32" cy="24" r="3" fill="#fff" />
+    <rect x="20" y="34" width="8" height="4" rx="2" fill="#fff" opacity="0.9" />
+    <rect x="40" y="18" width="6" height="6" rx="2" fill="#0f1724" opacity="0.08" />
+  </g>
+
+  <!-- text -->
+  <g transform="translate(68,18)">
+    <text class="t">Physical AI</text>
+    <text class="t" y="22" x="0" font-size="12" fill="#475569"> &amp; Humanoid Robotics</text>
+  </g>
+</svg>

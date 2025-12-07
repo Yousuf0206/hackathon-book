@@ -1,0 +1,23 @@
+/* Minimal custom CSS for Docusaurus site */
+:root {
+  --ifm-color-primary: #0b6efd;
+}
+
+/* Basic typography and spacing */
+body {
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__title {
+  font-weight: 600;
+}
+
+/* Small helper to ensure images don't overflow */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* End of custom.css */
