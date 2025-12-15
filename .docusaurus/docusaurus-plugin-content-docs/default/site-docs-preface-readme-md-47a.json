@@ -1,0 +1,20 @@
+{
+  "id": "preface/README",
+  "title": "Preface",
+  "description": "Welcome to the comprehensive guide on Physical AI and Humanoid Robotics. This book is designed to provide students, educators, and developers with practical knowledge of modern robotics technologies including ROS 2, Gazebo, Unity, NVIDIA Isaac, and Vision-Language-Action (VLA) systems.",
+  "source": "@site/docs/preface/README.md",
+  "sourceDirName": "preface",
+  "slug": "/preface/",
+  "permalink": "/hackathon-book/docs/preface/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/preface/README.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "Preface",
+    "permalink": "/hackathon-book/docs/preface/"
+  }
+}

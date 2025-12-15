@@ -1,0 +1,24 @@
+{
+  "id": "modules/module4-vla/chapter5-capstone-project/README",
+  "title": "Chapter 5: Capstone Project - Building an Integrated VLA System",
+  "description": "Learning Objectives",
+  "source": "@site/docs/modules/module4-vla/chapter5-capstone-project/README.md",
+  "sourceDirName": "modules/module4-vla/chapter5-capstone-project",
+  "slug": "/modules/module4-vla/chapter5-capstone-project/",
+  "permalink": "/hackathon-book/docs/modules/module4-vla/chapter5-capstone-project/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/modules/module4-vla/chapter5-capstone-project/README.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 4: Multi-Modal Perception",
+    "permalink": "/hackathon-book/docs/modules/module4-vla/chapter4-multi-modal-perception/"
+  },
+  "next": {
+    "title": "Appendix",
+    "permalink": "/hackathon-book/docs/appendix/"
+  }
+}
