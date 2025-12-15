@@ -1,0 +1,24 @@
+{
+  "id": "modules/module1-ros2/preface",
+  "title": "Module 1: ROS 2 - Physical AI Foundations",
+  "description": "Overview",
+  "source": "@site/docs/modules/module1-ros2/preface.md",
+  "sourceDirName": "modules/module1-ros2",
+  "slug": "/modules/module1-ros2/preface",
+  "permalink": "/hackathon-book/docs/modules/module1-ros2/preface",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/modules/module1-ros2/preface.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Preface",
+    "permalink": "/hackathon-book/docs/preface/"
+  },
+  "next": {
+    "title": "Module 1: ROS 2 - Physical AI Foundations",
+    "permalink": "/hackathon-book/docs/modules/module1-ros2/preface"
+  }
+}

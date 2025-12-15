@@ -1,0 +1,24 @@
+{
+  "id": "modules/module1-ros2/chapter2-architecture/README",
+  "title": "Chapter 2: ROS 2 Architecture",
+  "description": "Learning Objectives",
+  "source": "@site/docs/modules/module1-ros2/chapter2-architecture/README.md",
+  "sourceDirName": "modules/module1-ros2/chapter2-architecture",
+  "slug": "/modules/module1-ros2/chapter2-architecture/",
+  "permalink": "/hackathon-book/docs/modules/module1-ros2/chapter2-architecture/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/modules/module1-ros2/chapter2-architecture/README.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 1: Introduction to Physical AI & Robotics Foundations",
+    "permalink": "/hackathon-book/docs/modules/module1-ros2/chapter1-introduction/"
+  },
+  "next": {
+    "title": "Chapter 3: Building ROS 2 Packages with rclpy",
+    "permalink": "/hackathon-book/docs/modules/module1-ros2/chapter3-packages/"
+  }
+}
