@@ -17,6 +17,8 @@ class ChatRequest(BaseModel):
     query: str
     selected_text: Optional[str] = None
     session_id: Optional[str] = None
+    user_id: Optional[int] = None  # Added for personalization
+    target_language: str = "en"  # Added for multilingual support
 
 
 class Citation(BaseModel):
@@ -61,7 +63,9 @@ async def chat_endpoint(request: ChatRequest) -> ChatResponse:
         result = chat_service.process_query(
             query=request.query,
             selected_text=request.selected_text,
-            session_id=request.session_id
+            session_id=request.session_id,
+            user_id=request.user_id,
+            target_language=request.target_language
         )
 
         response_time_ms = (time.time() - start_time) * 1000

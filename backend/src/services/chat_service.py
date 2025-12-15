@@ -9,6 +9,7 @@ import time
 from ..models.chat import ChatSession
 from ..services.embedding_service import EmbeddingService
 from ..services.retrieval_service import RetrievalService
+from ..auth.auth_system import auth_system
 
 
 class ChatService:
@@ -39,7 +40,7 @@ class ChatService:
             'total_general_time': 0.0
         }
 
-    def process_query(self, query: str, selected_text: Optional[str] = None, session_id: Optional[str] = None) -> Dict[str, Any]:
+    def process_query(self, query: str, selected_text: Optional[str] = None, session_id: Optional[str] = None, user_id: Optional[int] = None, target_language: str = "en") -> Dict[str, Any]:
         """
         Process a user query and return an AI-generated response with citations.
         """
@@ -58,6 +59,36 @@ class ChatService:
         # Add user message to session
         session.add_message("user", query)
 
+        # Get user profile if user_id is provided
+        user_profile = None
+        if user_id:
+            # Get user from auth system
+            # For this implementation, we'll query the database directly
+            # since we don't have a direct method in auth_system to get user by ID
+            import sqlite3
+            import json
+            from contextlib import contextmanager
+
+            @contextmanager
+            def get_db_connection():
+                conn = sqlite3.connect(auth_system.db_path)
+                try:
+                    yield conn
+                finally:
+                    conn.close()
+
+            with get_db_connection() as conn:
+                cursor = conn.execute(
+                    "SELECT background FROM users WHERE id = ?",
+                    (user_id,)
+                )
+                row = cursor.fetchone()
+                if row and row[0]:
+                    try:
+                        user_profile = json.loads(row[0])
+                    except json.JSONDecodeError:
+                        user_profile = None
+
         # Retrieve relevant context
         if selected_text:
             # If selected text is provided, use it as the primary context
@@ -68,8 +99,8 @@ class ChatService:
             context_chunks = self._get_context_for_query(query)
             query_type = 'general'
 
-        # Generate AI response with context
-        response = self._generate_response_with_context(query, context_chunks)
+        # Generate AI response with context, considering user profile and target language
+        response = self._generate_response_with_context(query, context_chunks, user_profile, target_language)
 
         # Add AI response to session
         session.add_message("assistant", response["response"])
@@ -161,9 +192,9 @@ class ChatService:
 
         return results
 
-    def _generate_response_with_context(self, query: str, context_chunks: List[Dict[str, Any]]) -> Dict[str, Any]:
+    def _generate_response_with_context(self, query: str, context_chunks: List[Dict[str, Any]], user_profile: Optional[Dict[str, Any]] = None, target_language: str = "en") -> Dict[str, Any]:
         """
-        Generate an AI response using the provided context.
+        Generate an AI response using the provided context, considering user profile and target language if available.
         """
         # Check if this is a selected text query by looking for the selected_text marker
         is_selected_text_query = any(chunk.get("chunk_id") == "selected_text" for chunk in context_chunks)
@@ -172,40 +203,74 @@ class ChatService:
         context_str = "\n\n".join([f"Source: {chunk['source_url']} (Chapter: {chunk['chapter']})\nContent: {chunk['text']}"
                                   for chunk in context_chunks])
 
-        # Create the prompt for the AI
-        if is_selected_text_query:
-            # For selected text queries, be more strict about grounding in the provided context
-            prompt = f"""
-            You are an AI assistant that answers questions based only on the provided text selection.
-            Your answer must be grounded solely in the context provided below.
-            Do not use any external knowledge or information beyond what is in the context.
-            If the context doesn't contain enough information to answer the question, clearly state that.
-            Always provide source citations for the information you use.
+        # Determine user profile details for prompt customization
+        software_level = "intermediate"  # default
+        hardware_level = "mid-range"     # default
+        if user_profile:
+            software_level = user_profile.get('software_experience', 'intermediate')
+            hardware_level = user_profile.get('hardware_familiarity', 'mid-range')
 
-            Context:
-            {context_str}
+        # Create the appropriate prompt based on language and query type
+        if target_language.lower() == "ur":
+            # Urdu prompt templates as specified in the plan
+            if is_selected_text_query:
+                # Urdu - Selected Text Only
+                system_message = "آپ ایک تکنیکی کتاب کے AI اسسٹنٹ ہیں۔ فقط درج ذیل منتخب متن کی بنیاد پر جواب دیں۔"
+                prompt = f"""
+                منتخب متن:
+                {context_str}
 
-            Question: {query}
+                اصول:
+                - کوئی اندازہ نہ لگائیں
+                - بیرونی علم استعمال نہ کریں
 
-            Answer:
-            """
-            system_message = "You are a helpful assistant that answers questions based only on the provided selected text context. Do not use any external knowledge. Always cite your sources."
+                سوال:
+                {query}
+
+                جواب:
+                """
+            else:
+                # Urdu - Standard
+                system_message = f"آپ ایک تکنیکی کتاب کے AI اسسٹنٹ ہیں۔ فقط فراہم کردہ مواد استعمال کریں۔ صارف کی سطح: - سافٹ ویئر: {software_level} - ہارڈویئر: {hardware_level}"
+                prompt = f"""
+                اصول:
+                - کوئی اندازہ نہ لگائیں
+                - اگر جواب موجود نہ ہو تو بتائیں
+
+                مواد:
+                {context_str}
+
+                سوال:
+                {query}
+
+                جواب:
+                """
         else:
-            # For general queries, use the standard approach
-            prompt = f"""
-            You are an AI assistant that answers questions based on provided book content.
-            Only use the information provided in the context below to answer the user's question.
-            If the context doesn't contain enough information to answer the question, say so.
-            Always provide source citations for the information you use.
+            # English prompt templates as specified in the plan
+            if is_selected_text_query:
+                # English - Selected Text Only
+                system_message = "Answer ONLY using the selected text below. Do not infer. Do not use external knowledge."
+                prompt = f"""
+                SELECTED TEXT:
+                {context_str}
 
-            Context:
-            {context_str}
+                QUESTION:
+                {query}
 
-            Question: {query}
+                ANSWER:
+                """
+            else:
+                # English - Standard
+                system_message = f"You are an AI assistant embedded inside a technical book. Answer strictly using the provided context. USER PROFILE: - Software Level: {software_level} - Hardware Level: {hardware_level}. RULES: - No hallucinations - Match depth to user profile - If answer not found, say so."
+                prompt = f"""
+                CONTEXT:
+                {context_str}
 
-            Answer:
-            """
-            system_message = "You are a helpful assistant that answers questions based on provided context. Always cite your sources."
+                QUESTION:
+                {query}
+
+                ANSWER:
+                """
 
         try:
             # Call OpenAI API to generate response

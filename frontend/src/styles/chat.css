@@ -19,11 +19,34 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .chat-header h3 {
   margin: 0;
   color: #333;
+}
+
+.chat-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.language-dropdown {
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: white;
+  font-size: 0.9em;
 }
 
 .selected-text-preview {

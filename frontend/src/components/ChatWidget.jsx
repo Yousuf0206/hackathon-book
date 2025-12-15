@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ChatMessage from './ChatMessage';
 import SourceCitation from './SourceCitation';
+import apiService from '../services/api';
 import './chat.css';
 
 const ChatWidget = () => {
@@ -9,6 +10,7 @@ const ChatWidget = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [selectedText, setSelectedText] = useState('');
   const [sessionId, setSessionId] = useState(null);
+  const [targetLanguage, setTargetLanguage] = useState('en'); // Track active language
   const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {
@@ -35,43 +37,20 @@ const ChatWidget = () => {
     setIsLoading(true);
 
     try {
-      // Call the backend API
-      const response = await fetch('/api/chat', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          query: inputValue,
-          selected_text: selectedText,
-          session_id: sessionId
-        })
-      });
+      // Use the API service to call the backend
+      const data = await apiService.chat(inputValue, selectedText, sessionId, targetLanguage);
 
-      const data = await response.json();
+      // Add AI response to chat
+      const aiMessage = {
+        id: Date.now() + 1,
+        text: data.response,
+        sender: 'ai',
+        citations: data.citations,
+        timestamp: new Date()
+      };
 
-      if (response.ok) {
-        // Add AI response to chat
-        const aiMessage = {
-          id: Date.now() + 1,
-          text: data.response,
-          sender: 'ai',
-          citations: data.citations,
-          timestamp: new Date()
-        };
-
-        setMessages(prev => [...prev, aiMessage]);
-        setSessionId(data.session_id);
-      } else {
-        // Add error message
-        const errorMessage = {
-          id: Date.now() + 1,
-          text: `Error: ${data.detail || 'An error occurred'}`,
-          sender: 'system',
-          timestamp: new Date()
-        };
-        setMessages(prev => [...prev, errorMessage]);
-      }
+      setMessages(prev => [...prev, aiMessage]);
+      setSessionId(data.session_id);
     } catch (error) {
       const errorMessage = {
         id: Date.now() + 1,
@@ -104,18 +83,32 @@ const ChatWidget = () => {
     <div className="chat-widget" role="main" aria-label="Book Assistant Chat Interface">
       <div className="chat-header" role="banner">
         <h3>Book Assistant</h3>
-        {selectedText && (
-          <div className="selected-text-preview" aria-label="Selected text preview">
-            <small>Selected: {selectedText.substring(0, 60)}...</small>
-            <button
-              onClick={() => setSelectedText('')}
-              className="clear-selection"
-              aria-label="Clear selected text"
+        <div className="chat-controls">
+          <div className="language-selector">
+            <label htmlFor="language-select">Language:</label>
+            <select
+              id="language-select"
+              value={targetLanguage}
+              onChange={(e) => setTargetLanguage(e.target.value)}
+              className="language-dropdown"
             >
-              Clear
-            </button>
+              <option value="en">English</option>
+              <option value="ur">Urdu</option>
+            </select>
           </div>
-        )}
+          {selectedText && (
+            <div className="selected-text-preview" aria-label="Selected text preview">
+              <small>Selected: {selectedText.substring(0, 60)}...</small>
+              <button
+                onClick={() => setSelectedText('')}
+                className="clear-selection"
+                aria-label="Clear selected text"
+              >
+                Clear
+              </button>
+            </div>
+          )}
+        </div>
       </div>
 
       <div
@@ -131,7 +124,11 @@ const ChatWidget = () => {
           </div>
         ) : (
           messages.map((message) => (
-            <ChatMessage key={message.id} message={message} />
+            <ChatMessage
+              key={message.id}
+              message={message}
+              targetLanguage={targetLanguage} // Pass language to message component if needed
+            />
           ))
         )}
         {isLoading && (

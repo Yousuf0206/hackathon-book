@@ -39,15 +39,15 @@ export default [
   },
   {
     path: '/hackathon-book/docs',
-    component: ComponentCreator('/hackathon-book/docs', '3ef'),
+    component: ComponentCreator('/hackathon-book/docs', 'd4a'),
     routes: [
       {
         path: '/hackathon-book/docs',
-        component: ComponentCreator('/hackathon-book/docs', 'f35'),
+        component: ComponentCreator('/hackathon-book/docs', '5f3'),
         routes: [
           {
             path: '/hackathon-book/docs',
-            component: ComponentCreator('/hackathon-book/docs', '651'),
+            component: ComponentCreator('/hackathon-book/docs', '9fd'),
             routes: [
               {
                 path: '/hackathon-book/docs/appendix/',
@@ -109,7 +109,7 @@ export default [
               },
               {
                 path: '/hackathon-book/docs/modules/module1-ros2/chapter1-introduction/',
-                component: ComponentCreator('/hackathon-book/docs/modules/module1-ros2/chapter1-introduction/', '474'),
+                component: ComponentCreator('/hackathon-book/docs/modules/module1-ros2/chapter1-introduction/', '2c6'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },

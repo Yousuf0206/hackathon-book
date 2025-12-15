@@ -1,7 +1,7 @@
 import React from 'react';
 import SourceCitation from './SourceCitation';
 
-const ChatMessage = ({ message }) => {
+const ChatMessage = ({ message, targetLanguage = 'en' }) => {
   const { sender, text, citations } = message;
 
   const formatText = (text) => {
@@ -14,6 +14,8 @@ const ChatMessage = ({ message }) => {
     ));
   };
 
+  const isUrdu = targetLanguage === 'ur';
+
   return (
     <div
       className={`chat-message ${sender}-message`}
@@ -21,7 +23,7 @@ const ChatMessage = ({ message }) => {
       aria-label={`${sender} message`}
     >
       <div className="message-content">
-        <div className="message-text">
+        <div className={`message-text ${isUrdu ? 'urdu-text' : ''}`}>
           {formatText(text)}
         </div>
         {citations && citations.length > 0 && (

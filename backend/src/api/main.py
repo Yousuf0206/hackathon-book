@@ -3,7 +3,7 @@ Main FastAPI application entry point.
 """
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .routes import health, query, chat, embed
+from .routes import health, query, chat, embed, auth, translate
 from ..api.middleware.auth import RateLimitMiddleware
 from ..api.middleware.logging import LoggingMiddleware
 from ..api.middleware.security import SecurityMiddleware
@@ -35,6 +35,8 @@ app.include_router(health.router, prefix="/api", tags=["health"])
 app.include_router(query.router, prefix="/api", tags=["query"])
 app.include_router(chat.router, prefix="/api", tags=["chat"])
 app.include_router(embed.router, prefix="/api", tags=["embed"])
+app.include_router(auth.router, prefix="/api", tags=["auth"])
+app.include_router(translate.router, prefix="/api", tags=["translate"])
 
 @app.get("/")
 async def root():
