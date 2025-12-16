@@ -36,7 +36,7 @@ export default {
     ]
   ],
   "themeConfig": {
-    "image": "img/physical-ai-humanoid-robotics.jpg",
+    "image": "img/physical-ai-humanoid-robotics.svg",
     "navbar": {
       "title": "Physical AI Book",
       "logo": {
