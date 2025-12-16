@@ -11,6 +11,8 @@ services:
       - QDRANT_URL=${QDRANT_URL}
       - QDRANT_API_KEY=${QDRANT_API_KEY}
       - DATABASE_URL=${DATABASE_URL}
+      - AUTH_SECRET_KEY=${AUTH_SECRET_KEY}
+      - ACCESS_TOKEN_EXPIRE_MINUTES=${ACCESS_TOKEN_EXPIRE_MINUTES}
     volumes:
       - ./backend:/app/backend
     depends_on:
