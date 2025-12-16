@@ -1,7 +1,7 @@
-# Implementation Plan: [FEATURE]
+# Implementation Plan: RAG Chatbot Integration for AI/Spec-Driven Book
 
-**Branch**: `[###-feature-name]` | **Date**: [DATE] | **Spec**: [link]
-**Input**: Feature specification from `/specs/[###-feature-name]/spec.md`
+**Branch**: `001-rag-chatbot-integration` | **Date**: 2025-12-16 | **Spec**: [specs/001-rag-chatbot-integration/spec.md](specs/001-rag-chatbot-integration/spec.md)
+**Input**: Feature specification from `/specs/001-rag-chatbot-integration/spec.md`
 
 **Note**: This template is filled in by the `/sp.plan` command. See `.specify/templates/commands/plan.md` for the execution workflow.
 
@@ -11,9 +11,9 @@ Implementation of a RAG (Retrieval-Augmented Generation) chatbot system for the 
 
 ## Technical Context
 
-**Language/Version**: Python 3.11, JavaScript/TypeScript for frontend integration
-**Primary Dependencies**: FastAPI, OpenAI Agents SDK, Cohere API, Qdrant Cloud, Neon Postgres
-**Storage**: Qdrant Cloud (vector database), Neon Postgres (metadata/logs), Docusaurus website (content source)
+**Language/Version**: Python 3.11 (backend), JavaScript/TypeScript (frontend)
+**Primary Dependencies**: FastAPI, OpenAI Agents SDK, Cohere API, Qdrant Cloud, Neon Postgres, Better Auth
+**Storage**: Qdrant Cloud (vector database), Neon Postgres (user profiles), Docusaurus site (content source)
 **Testing**: pytest for backend, Jest for frontend integration tests
 **Target Platform**: Web application (Docusaurus book frontend with FastAPI backend)
 **Project Type**: Web application (backend API + frontend integration)
