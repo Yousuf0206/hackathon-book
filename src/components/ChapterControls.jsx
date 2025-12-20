@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PersonalizationControls from '../../frontend/src/components/PersonalizationControls';
 import UrduTranslationControls from '../../frontend/src/components/UrduTranslationControls';
-import '../../frontend/src/components/personalization.css';
-import '../../frontend/src/components/translation.css';
-import './chapter-controls.css';
 
 const ChapterControls = ({ children }) => {
   const [personalizedContent, setPersonalizedContent] = useState(null);

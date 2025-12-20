@@ -1,12 +1,18 @@
 """
 Main FastAPI application entry point.
 """
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from .routes import health, query, chat, embed, auth, translate
-from ..api.middleware.auth import RateLimitMiddleware
-from ..api.middleware.logging import LoggingMiddleware
-from ..api.middleware.security import SecurityMiddleware
+from .middleware.auth import RateLimitMiddleware
+from .middleware.logging import LoggingMiddleware
+from .middleware.security import SecurityMiddleware
 
 
 # Create FastAPI app instance

@@ -29,6 +29,18 @@ const config = {
     locales: ['en'],
   },
 
+  plugins: [
+    async function myPlugin(context, options) {
+      return {
+        name: 'postcss-plugin',
+        configurePostCss(postcssOptions) {
+          // Appends new PostCSS plugins
+          postcssOptions.plugins.push(require('autoprefixer'));
+          return postcssOptions;
+        },
+      };
+    },
+  ],
   presets: [
     [
       'classic',

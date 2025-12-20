@@ -20,6 +20,9 @@ export default {
     "path": "i18n",
     "localeConfigs": {}
   },
+  "plugins": [
+    null
+  ],
   "presets": [
     [
       "classic",
@@ -366,7 +369,6 @@ export default {
     "static"
   ],
   "customFields": {},
-  "plugins": [],
   "themes": [],
   "scripts": [],
   "headTags": [],

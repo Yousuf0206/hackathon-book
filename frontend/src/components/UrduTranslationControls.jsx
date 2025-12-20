@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './translation.css';
 
 const UrduTranslationControls = ({ content, onContentChange }) => {
   const [isTranslated, setIsTranslated] = useState(false);
@@ -88,29 +87,36 @@ const UrduTranslationControls = ({ content, onContentChange }) => {
 
   if (!userProfile) {
     return (
-      <div className="translation-prompt">
-        <div className="translation-message">
-          <h3>Sign in to access Urdu translation</h3>
-          <p>Log in to translate this content to Urdu.</p>
-          <a href="/signin" className="auth-link">Sign In</a> or <a href="/signup" className="auth-link">Sign Up</a>
+      <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
+        <div className="text-center">
+          <h3 className="text-lg font-medium text-green-800 dark:text-green-200 mb-2">Sign in to access Urdu translation</h3>
+          <p className="text-green-600 dark:text-green-300 mb-3">Log in to translate this content to Urdu.</p>
+          <div className="flex justify-center space-x-4">
+            <a href="/signin" className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">Sign In</a>
+            <a href="/signup" className="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">Sign Up</a>
+          </div>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="translation-controls">
-      <div className="controls-header">
-        <h3>Translate to Urdu</h3>
-        <p>Convert this content to Urdu for easier understanding</p>
+    <div className="space-y-4">
+      <div className="text-center">
+        <h3 className="text-lg font-medium text-gray-800 dark:text-gray-200">Translate to Urdu</h3>
+        <p className="text-sm text-gray-600 dark:text-gray-400">Convert this content to Urdu for easier understanding</p>
       </div>
 
-      <div className="controls-form">
-        <div className="button-group">
+      <div className="space-y-4">
+        <div className="flex flex-wrap gap-2">
           <button
             onClick={handleTranslateToUrdu}
             disabled={isTranslating}
-            className="translate-btn"
+            className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+              isTranslating
+                ? 'bg-gray-300 dark:bg-gray-600 text-gray-500 dark:text-gray-400 cursor-not-allowed'
+                : 'bg-green-600 hover:bg-green-700 text-white'
+            }`}
           >
             {isTranslating ? 'Translating...' : isTranslated ? 'Re-translate' : 'Translate to Urdu'}
           </button>
@@ -118,7 +124,7 @@ const UrduTranslationControls = ({ content, onContentChange }) => {
           {isTranslated && (
             <button
               onClick={handleReset}
-              className="reset-btn"
+              className="px-4 py-2 rounded-lg font-medium bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
             >
               Reset to Original
             </button>
@@ -127,8 +133,8 @@ const UrduTranslationControls = ({ content, onContentChange }) => {
       </div>
 
       {isTranslated && (
-        <div className="translation-status">
-          <span className="status-indicator active"></span>
+        <div className="flex items-center space-x-2 text-green-600 dark:text-green-400">
+          <div className="w-2 h-2 bg-green-500 rounded-full"></div>
           <span>Content translated to Urdu</span>
         </div>
       )}

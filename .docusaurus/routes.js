@@ -264,6 +264,11 @@ export default [
     ]
   },
   {
+    path: '/hackathon-book/',
+    component: ComponentCreator('/hackathon-book/', 'ee1'),
+    exact: true
+  },
+  {
     path: '*',
     component: ComponentCreator('*'),
   },

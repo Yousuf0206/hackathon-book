@@ -80,7 +80,6 @@ async def chat_endpoint(request: ChatRequest) -> ChatResponse:
             session_id=result["session_id"],
             response_time_ms=response_time_ms
         )
-
     except HTTPException:
         # Re-raise HTTP exceptions as-is
         raise

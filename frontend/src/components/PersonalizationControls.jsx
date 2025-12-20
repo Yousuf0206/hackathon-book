@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './personalization.css';
 
 const PersonalizationControls = ({ content, onContentChange }) => {
   const [isPersonalized, setIsPersonalized] = useState(false);
@@ -71,31 +70,37 @@ const PersonalizationControls = ({ content, onContentChange }) => {
 
   if (!userProfile) {
     return (
-      <div className="personalization-prompt">
-        <div className="personalization-message">
-          <h3>Sign in to personalize your learning experience</h3>
-          <p>Log in to customize content based on your background and preferences.</p>
-          <a href="/signin" className="auth-link">Sign In</a> or <a href="/signup" className="auth-link">Sign Up</a>
+      <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+        <div className="text-center">
+          <h3 className="text-lg font-medium text-blue-800 dark:text-blue-200 mb-2">Sign in to personalize your learning experience</h3>
+          <p className="text-blue-600 dark:text-blue-300 mb-3">Log in to customize content based on your background and preferences.</p>
+          <div className="flex justify-center space-x-4">
+            <a href="/signin" className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">Sign In</a>
+            <a href="/signup" className="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">Sign Up</a>
+          </div>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="personalization-controls">
-      <div className="controls-header">
-        <h3>Personalize Content</h3>
-        <p>Adjust the content to match your experience level and preferences</p>
+    <div className="space-y-4">
+      <div className="text-center">
+        <h3 className="text-lg font-medium text-gray-800 dark:text-gray-200">Personalize Content</h3>
+        <p className="text-sm text-gray-600 dark:text-gray-400">Adjust the content to match your experience level and preferences</p>
       </div>
 
-      <div className="controls-form">
-        <div className="form-group">
-          <label htmlFor="personalization-level">Experience Level:</label>
+      <div className="space-y-4">
+        <div className="space-y-2">
+          <label htmlFor="personalization-level" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+            Experience Level:
+          </label>
           <select
             id="personalization-level"
             value={personalizationLevel}
             onChange={(e) => setPersonalizationLevel(e.target.value)}
             disabled={isLoading}
+            className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           >
             <option value="default">Default (as written)</option>
             <option value="simplified">Simplified (for beginners)</option>
@@ -103,11 +108,15 @@ const PersonalizationControls = ({ content, onContentChange }) => {
           </select>
         </div>
 
-        <div className="button-group">
+        <div className="flex flex-wrap gap-2">
           <button
             onClick={handlePersonalize}
             disabled={isLoading}
-            className="personalize-btn"
+            className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+              isLoading
+                ? 'bg-gray-300 dark:bg-gray-600 text-gray-500 dark:text-gray-400 cursor-not-allowed'
+                : 'bg-blue-600 hover:bg-blue-700 text-white'
+            }`}
           >
             {isLoading ? 'Personalizing...' : isPersonalized ? 'Update Personalization' : 'Personalize Content'}
           </button>
@@ -115,7 +124,7 @@ const PersonalizationControls = ({ content, onContentChange }) => {
           {isPersonalized && (
             <button
               onClick={handleReset}
-              className="reset-btn"
+              className="px-4 py-2 rounded-lg font-medium bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
             >
               Reset to Original
             </button>
@@ -124,8 +133,8 @@ const PersonalizationControls = ({ content, onContentChange }) => {
       </div>
 
       {isPersonalized && (
-        <div className="personalization-status">
-          <span className="status-indicator active"></span>
+        <div className="flex items-center space-x-2 text-green-600 dark:text-green-400">
+          <div className="w-2 h-2 bg-green-500 rounded-full"></div>
           <span>Content personalized based on your profile</span>
         </div>
       )}

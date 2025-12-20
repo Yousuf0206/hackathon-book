@@ -9,6 +9,7 @@ import logging
 import json
 from datetime import datetime
 import uuid
+from fastapi.responses import JSONResponse
 
 
 # Configure logging
@@ -20,7 +21,15 @@ class LoggingMiddleware:
     """
     Middleware to implement structured logging for API requests and responses with key metrics.
     """
-    async def __call__(self, request: Request, call_next):
+    def __init__(self, app):
+        self.app = app
+
+    async def __call__(self, scope, receive, send):
+        if scope["type"] != "http":
+            return await self.app(scope, receive, send)
+
+        request = Request(scope, receive)
+
         # Log request
         start_time = time.time()
         request_id = str(uuid.uuid4())
@@ -48,22 +57,18 @@ class LoggingMiddleware:
 
         try:
             # Process the request
-            response: Response = await call_next(request)
+            response = await self.app(scope, receive, send)
 
             # Calculate processing time
             process_time = time.time() - start_time
 
-            # Add process time to response headers
-            response.headers["X-Process-Time"] = str(process_time)
-            response.headers["X-Request-ID"] = request_id
-
             # Log response with metrics
+            process_time_ms = round(process_time * 1000, 2)
             response_details = {
                 "timestamp": datetime.utcnow().isoformat(),
                 "request_id": request_id,
-                "status_code": response.status_code,
-                "process_time_ms": round(process_time * 1000, 2),
-                "content_length": response.headers.get("content-length", len(response.body) if hasattr(response, 'body') else 0),
+                "status_code": response.status,
+                "process_time_ms": process_time_ms,
                 "path": request.url.path,
                 "method": request.method
             }
@@ -74,10 +79,10 @@ class LoggingMiddleware:
                 "level": "info",
                 "details": response_details,
                 "metrics": {
-                    "response_time_ms": response_details["process_time_ms"],
+                    "response_time_ms": process_time_ms,
                     "status_code": response_details["status_code"],
                     "endpoint": response_details["path"],
-                    "method": response_details["method"]
+                    "method": request.method
                 }
             }))
 
@@ -106,18 +111,34 @@ class LoggingMiddleware:
                     "response_time_ms": error_details["process_time_ms"],
                     "status_code": 500,
                     "endpoint": error_details["path"],
-                    "method": error_details["method"],
+                    "method": request.method,
                     "error_type": type(e).__name__
                 }
             }))
 
-            # Return error response
-            return JSONResponse(
-                status_code=500,
-                content={
-                    "error": {
-                        "code": "INTERNAL_ERROR",
-                        "message": "An internal server error occurred"
-                    }
+            # Create error response
+            response_body = json.dumps({
+                "error": {
+                    "code": "INTERNAL_ERROR",
+                    "message": "An internal server error occurred"
                 }
-            )
+            }).encode("utf-8")
+
+            # Create ASGI response
+            response_headers = [
+                (b"content-type", b"application/json"),
+                (b"content-length", str(len(response_body)).encode()),
+            ]
+
+            async def send_error_response():
+                await send({
+                    "type": "http.response.start",
+                    "status": 500,
+                    "headers": response_headers,
+                })
+                await send({
+                    "type": "http.response.body",
+                    "body": response_body,
+                })
+
+            await send_error_response()

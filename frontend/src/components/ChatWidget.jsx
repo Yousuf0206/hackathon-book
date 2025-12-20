@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import ChatMessage from './ChatMessage';
 import SourceCitation from './SourceCitation';
 import apiService from '../services/api';
-import './chat.css';
 
 const ChatWidget = () => {
   const [messages, setMessages] = useState([]);
@@ -80,47 +79,54 @@ const ChatWidget = () => {
   };
 
   return (
-    <div className="chat-widget" role="main" aria-label="Book Assistant Chat Interface">
-      <div className="chat-header" role="banner">
-        <h3>Book Assistant</h3>
-        <div className="chat-controls">
-          <div className="language-selector">
-            <label htmlFor="language-select">Language:</label>
-            <select
-              id="language-select"
-              value={targetLanguage}
-              onChange={(e) => setTargetLanguage(e.target.value)}
-              className="language-dropdown"
-            >
-              <option value="en">English</option>
-              <option value="ur">Urdu</option>
-            </select>
-          </div>
-          {selectedText && (
-            <div className="selected-text-preview" aria-label="Selected text preview">
-              <small>Selected: {selectedText.substring(0, 60)}...</small>
-              <button
-                onClick={() => setSelectedText('')}
-                className="clear-selection"
-                aria-label="Clear selected text"
+    <div className="flex flex-col h-[500px] border border-gray-300 dark:border-gray-700 rounded-xl overflow-hidden bg-white dark:bg-gray-800 shadow-xl transition-colors duration-300" role="main" aria-label="Book Assistant Chat Interface">
+      {/* Header with language selector */}
+      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 p-4 text-white">
+        <div className="flex justify-between items-center">
+          <h3 className="text-lg font-semibold">📚 Book Assistant</h3>
+          <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2">
+              <label htmlFor="language-select" className="text-sm">Language:</label>
+              <select
+                id="language-select"
+                value={targetLanguage}
+                onChange={(e) => setTargetLanguage(e.target.value)}
+                className="bg-white/20 border border-white/30 rounded px-2 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-white"
               >
-                Clear
-              </button>
+                <option value="en">English</option>
+                <option value="ur">Urdu</option>
+              </select>
             </div>
-          )}
+          </div>
         </div>
+
+        {selectedText && (
+          <div className="mt-2 p-2 bg-white/20 rounded-lg text-sm flex justify-between items-center">
+            <span className="truncate max-w-[70%]">Selected: {selectedText.substring(0, 60)}...</span>
+            <button
+              onClick={() => setSelectedText('')}
+              className="ml-2 px-2 py-1 bg-white/30 hover:bg-white/40 rounded text-xs transition-colors"
+              aria-label="Clear selected text"
+            >
+              Clear
+            </button>
+          </div>
+        )}
       </div>
 
+      {/* Messages container */}
       <div
-        className="chat-messages"
+        className="flex-1 overflow-y-auto p-4 bg-gray-50 dark:bg-gray-900/50 flex flex-col gap-4 max-h-[320px]"
         role="log"
         aria-live="polite"
         aria-label="Chat messages"
       >
         {messages.length === 0 ? (
-          <div className="welcome-message" role="status" aria-live="polite">
-            <p>Hello! I'm your book assistant. Ask me anything about the book content.</p>
-            <p>You can also select text in the book and click "Use Selected Text" to ask questions about that specific part.</p>
+          <div className="flex-1 flex flex-col items-center justify-center text-center p-8 text-gray-500 dark:text-gray-400" role="status" aria-live="polite">
+            <div className="mb-4 text-4xl">🤖</div>
+            <h3 className="text-xl font-medium mb-2 text-gray-800 dark:text-gray-200">Welcome to Book Assistant!</h3>
+            <p className="mb-1">Ask me anything about the book content.</p>
+            <p className="text-sm">Select text in the book and click "Use Selected Text" to ask questions about specific parts.</p>
           </div>
         ) : (
           messages.map((message) => (
@@ -132,49 +138,66 @@ const ChatWidget = () => {
           ))
         )}
         {isLoading && (
-          <div className="loading-message" role="status" aria-live="polite">
-            <div className="typing-indicator" aria-label="Assistant is typing">
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
+          <div className="flex justify-start" role="status" aria-live="polite">
+            <div className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-800 dark:text-gray-200 rounded-2xl px-4 py-3 rounded-bl-sm">
+              <div className="flex items-center">
+                <span className="mr-2">AI is thinking</span>
+                <div className="flex space-x-1">
+                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></div>
+                </div>
+              </div>
             </div>
           </div>
         )}
         <div ref={messagesEndRef} aria-hidden="true" />
       </div>
 
-      <div className="chat-input-area" role="form" aria-label="Chat input area">
-        <div className="input-controls">
-          <button
-            onClick={handleTextSelection}
-            className={`text-selection-btn ${selectedText ? 'active' : ''}`}
-            title="Use selected text from the book"
-            aria-label="Use selected text from the book"
-          >
-            Use Selected Text
-          </button>
-        </div>
+      {/* Input area */}
+      <div className="p-4 bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700" role="form" aria-label="Chat input area">
+        <div className="flex flex-col space-y-2">
+          <div className="flex space-x-2">
+            <button
+              onClick={handleTextSelection}
+              className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
+                selectedText
+                  ? 'bg-green-600 text-white hover:bg-green-700'
+                  : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+              }`}
+              title="Use selected text from the book"
+              aria-label="Use selected text from the book"
+            >
+              Use Selected Text
+            </button>
+          </div>
 
-        <div className="input-container">
-          <textarea
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-            onKeyDown={handleKeyDown}
-            placeholder="Ask a question about the book..."
-            disabled={isLoading}
-            rows="1"
-            aria-label="Type your question here"
-            role="textbox"
-            aria-multiline="true"
-          />
-          <button
-            onClick={handleSendMessage}
-            disabled={!inputValue.trim() || isLoading}
-            className="send-button"
-            aria-label="Send message"
-          >
-            Send
-          </button>
+          <div className="flex space-x-2">
+            <textarea
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+              onKeyDown={handleKeyDown}
+              placeholder="Ask a question about the book..."
+              disabled={isLoading}
+              rows="1"
+              className="flex-1 p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none min-h-[44px] max-h-[120px]"
+              aria-label="Type your question here"
+              role="textbox"
+              aria-multiline="true"
+            />
+            <button
+              onClick={handleSendMessage}
+              disabled={!inputValue.trim() || isLoading}
+              className={`px-4 py-3 rounded-lg font-medium transition-colors ${
+                !inputValue.trim() || isLoading
+                  ? 'bg-gray-300 dark:bg-gray-600 text-gray-500 dark:text-gray-400 cursor-not-allowed'
+                  : 'bg-blue-600 hover:bg-blue-700 text-white'
+              }`}
+              aria-label="Send message"
+            >
+              Send
+            </button>
+          </div>
         </div>
       </div>
     </div>

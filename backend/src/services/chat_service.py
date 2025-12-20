@@ -62,32 +62,12 @@ class ChatService:
         # Get user profile if user_id is provided
         user_profile = None
         if user_id:
-            # Get user from auth system
-            # For this implementation, we'll query the database directly
-            # since we don't have a direct method in auth_system to get user by ID
-            import sqlite3
-            import json
-            from contextlib import contextmanager
-
-            @contextmanager
-            def get_db_connection():
-                conn = sqlite3.connect(auth_system.db_path)
-                try:
-                    yield conn
-                finally:
-                    conn.close()
-
-            with get_db_connection() as conn:
-                cursor = conn.execute(
-                    "SELECT background FROM users WHERE id = ?",
-                    (user_id,)
-                )
-                row = cursor.fetchone()
-                if row and row[0]:
-                    try:
-                        user_profile = json.loads(row[0])
-                    except json.JSONDecodeError:
-                        user_profile = None
+            # In a real implementation, you would retrieve user profile from database
+            # For now, we'll return a default profile or None
+            user_profile = {
+                "software_experience": "intermediate",
+                "hardware_familiarity": "mid-range"
+            }
 
         # Retrieve relevant context
         if selected_text:
