@@ -47,10 +47,13 @@ const BookChat = () => {
         }
       }
 
-      // Determine the API base URL based on environment
-      const apiBaseUrl = process.env.NODE_ENV === 'production'
-        ? '/api'  // In production, relative path
-        : 'http://localhost:8000/api'; // For development
+      // Determine the API base URL based on environment variable or fallback
+      // In production, this should be set to your actual backend API URL via REACT_APP_API_BASE_URL environment variable
+      // Example for Vercel: Set REACT_APP_API_BASE_URL in your Vercel project settings
+      const apiBaseUrl = process.env.REACT_APP_API_BASE_URL ||
+                        (process.env.NODE_ENV === 'production'
+                          ? `${window.location.protocol}//${window.location.hostname}:8000/api` // Production - fallback to same host
+                          : 'http://localhost:8000/api'); // Development
 
       // Call the backend API
       const response = await fetch(`${apiBaseUrl}/chat`, {
@@ -67,30 +70,37 @@ const BookChat = () => {
         })
       });
 
-      const data = await response.json();
-
-      if (response.ok) {
-        // Add AI response to chat
-        const aiMessage = {
-          id: Date.now() + 1,
-          text: data.response,
-          sender: 'ai',
-          citations: data.citations,
-          timestamp: new Date()
-        };
-
-        setMessages(prev => [...prev, aiMessage]);
-        setSessionId(data.session_id);
-      } else {
-        // Add error message
-        const errorMessage = {
-          id: Date.now() + 1,
-          text: `Error: ${data.detail || 'An error occurred'}`,
-          sender: 'system',
-          timestamp: new Date()
-        };
-        setMessages(prev => [...prev, errorMessage]);
+      // Check if response is ok before parsing JSON
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
+
+      // Check if response body is empty
+      const responseText = await response.text();
+      if (!responseText) {
+        throw new Error('Empty response from server');
+      }
+
+      // Try to parse JSON
+      let data;
+      try {
+        data = JSON.parse(responseText);
+      } catch (e) {
+        console.error('Failed to parse JSON response:', responseText);
+        throw new Error('Invalid JSON response from server');
+      }
+
+      // Add AI response to chat
+      const aiMessage = {
+        id: Date.now() + 1,
+        text: data.response,
+        sender: 'ai',
+        citations: data.citations,
+        timestamp: new Date()
+      };
+
+      setMessages(prev => [...prev, aiMessage]);
+      setSessionId(data.session_id);
     } catch (error) {
       const errorMessage = {
         id: Date.now() + 1,
