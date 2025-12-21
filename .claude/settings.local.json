@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git fetch --all --prune)",
+      "Bash(powershell -Command \"& ''.specify/scripts/powershell/create-new-feature.ps1'' -Json -Number 1 -ShortName ''rag-chatbot-integration'' -Description ''RAG Chatbot Integration for AI/Spec-Driven Book''\")",
+      "Bash(mkdir -p specs/001-rag-chatbot-integration)",
+      "Bash(powershell -Command \"& ''.specify/scripts/powershell/setup-plan.ps1'' -Json\")",
+      "Bash(powershell -Command \"& ''.specify/scripts/powershell/update-agent-context.ps1'' -AgentType claude\")",
+      "Bash(powershell -Command \"& ''.specify/scripts/powershell/check-prerequisites.ps1'' -Json -RequireTasks -IncludeTasks\")",
+      "Bash(find . -name \"*.js*\" -exec grep -l \"Layout\\\\|layout\" {} ;)"
+    ]
+  }
+}

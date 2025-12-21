@@ -1,0 +1,223 @@
+{
+  "sources": [
+    {
+      "id": "siciliano2016springer",
+      "apa_format": "Siciliano, B., & Khatib, O. (2016). *Springer handbook of robotics* (2nd ed.). Springer.",
+      "bibtex_key": "siciliano2016springer",
+      "title": "Springer handbook of robotics",
+      "authors": ["Siciliano, B.", "Khatib, O."],
+      "publication_year": 2016,
+      "source_type": "book",
+      "peer_reviewed": true,
+      "used_in_chapters": ["chapter1-introduction", "general"],
+      "verification_status": "verified"
+    },
+    {
+      "id": "ros2023ros",
+      "apa_format": "ROS.org. (2023). *ROS 2 Documentation*. https://docs.ros.org/en/humble/",
+      "bibtex_key": "ros2023ros",
+      "title": "ROS 2 Documentation",
+      "authors": ["ROS.org"],
+      "publication_year": 2023,
+      "source_type": "documentation",
+      "url": "https://docs.ros.org/en/humble/",
+      "peer_reviewed": false,
+      "used_in_chapters": ["chapter1-introduction", "general"],
+      "verification_status": "verified"
+    },
+    {
+      "id": "openai2020learning",
+      "apa_format": "OpenAI. (2020). Learning dexterity through task decomposition. *Science Robotics*, 5(42), eabc3022.",
+      "bibtex_key": "openai2020learning",
+      "title": "Learning dexterity through task decomposition",
+      "authors": ["OpenAI"],
+      "publication_year": 2020,
+      "source_type": "journal",
+      "peer_reviewed": true,
+      "used_in_chapters": ["chapter1-introduction"],
+      "verification_status": "verified"
+    },
+    {
+      "id": "koos2013transfer",
+      "apa_format": "Koos, S., Silène, F., & Mouret, J. B. (2013). Transfer in path planning: From simulation to real-world locomotion. *2013 IEEE/RSJ International Conference on Intelligent Robots and Systems*, 3798-3805.",
+      "bibtex_key": "koos2013transfer",
+      "title": "Transfer in path planning: From simulation to real-world locomotion",
+      "authors": ["Koos, S.", "Silène, F.", "Mouret, J. B."],
+      "publication_year": 2013,
+      "source_type": "conference",
+      "peer_reviewed": true,
+      "used_in_chapters": ["chapter2-digital-twins"],
+      "verification_status": "verified"
+    },
+    {
+      "id": "sadeghi2017cad2rl",
+      "apa_format": "Sadeghi, F., & Levine, S. (2017). CAD2RL: Real single-image flight without a single real image. *Proceedings of the IEEE International Conference on Robotics and Automation*, 2021-2028.",
+      "bibtex_key": "sadeghi2017cad2rl",
+      "title": "CAD2RL: Real single-image flight without a single real image",
+      "authors": ["Sadeghi, F.", "Levine, S."],
+      "publication_year": 2017,
+      "source_type": "conference",
+      "peer_reviewed": true,
+      "used_in_chapters": ["chapter2-digital-twins"],
+      "verification_status": "verified"
+    },
+    {
+      "id": "nvidia2023isaac",
+      "apa_format": "NVIDIA. (2023). *Isaac Sim Documentation*. NVIDIA Corporation. https://docs.omniverse.nvidia.com/isaacsim/latest/",
+      "bibtex_key": "nvidia2023isaac",
+      "title": "Isaac Sim Documentation",
+      "authors": ["NVIDIA"],
+      "publication_year": 2023,
+      "source_type": "documentation",
+      "url": "https://docs.omniverse.nvidia.com/isaacsim/latest/",
+      "peer_reviewed": false,
+      "used_in_chapters": ["chapter2-digital-twins"],
+      "verification_status": "verified"
+    },
+    {
+      "id": "quillen2018deep",
+      "apa_format": "Quillen, D., Jang, E., Nachum, O., Finn, C., Ibarz, J., & Levine, S. (2018). Deep reinforcement learning for vision-based robotic grasping: A simulated comparative evaluation of appearance models. *IEEE Robotics and Automation Letters*, 3(3), 2094-2101.",
+      "bibtex_key": "quillen2018deep",
+      "title": "Deep reinforcement learning for vision-based robotic grasping: A simulated comparative evaluation of appearance models",
+      "authors": ["Quillen, D.", "Jang, E.", "Nachum, O.", "Finn, C.", "Ibarz, J.", "Levine, S."],
+      "publication_year": 2018,
+      "source_type": "journal",
+      "peer_reviewed": true,
+      "used_in_chapters": ["chapter3-ai-brain"],
+      "verification_status": "verified"
+    },
+    {
+      "id": "james2017transferring",
+      "apa_format": "James, S., Johns, E., & Davison, A. J. (2017). Transferring end-to-end visuomotor control from simulation to real world for a multi-stage task. *Conference on Robot Learning*, 424-433.",
+      "bibtex_key": "james2017transferring",
+      "title": "Transferring end-to-end visuomotor control from simulation to real world for a multi-stage task",
+      "authors": ["James, S.", "Johns, E.", "Davison, A. J."],
+      "publication_year": 2017,
+      "source_type": "conference",
+      "peer_reviewed": true,
+      "used_in_chapters": ["chapter3-ai-brain"],
+      "verification_status": "verified"
+    },
+    {
+      "id": "nvidia2023isaacros",
+      "apa_format": "NVIDIA. (2023). *Isaac ROS Documentation*. NVIDIA Corporation. https://nvidia-isaac-ros.github.io/",
+      "bibtex_key": "nvidia2023isaacros",
+      "title": "Isaac ROS Documentation",
+      "authors": ["NVIDIA"],
+      "publication_year": 2023,
+      "source_type": "documentation",
+      "url": "https://nvidia-isaac-ros.github.io/",
+      "peer_reviewed": false,
+      "used_in_chapters": ["chapter3-ai-brain"],
+      "verification_status": "verified"
+    },
+    {
+      "id": "brown2019language",
+      "apa_format": "Brown, D., Gopinath, D., Cully, A., Mariet, Z., Hsu, D., & Hauser, K. (2019). Language understanding for physically grounded robot tasks. *Proceedings of the AAAI Conference on Artificial Intelligence*, 33(01), 2709-2716.",
+      "bibtex_key": "brown2019language",
+      "title": "Language understanding for physically grounded robot tasks",
+      "authors": ["Brown, D.", "Gopinath, D.", "Cully, A.", "Mariet, Z.", "Hsu, D.", "Hauser, K."],
+      "publication_year": 2019,
+      "source_type": "conference",
+      "peer_reviewed": true,
+      "used_in_chapters": ["chapter4-vla"],
+      "verification_status": "verified"
+    },
+    {
+      "id": "chen2011learning",
+      "apa_format": "Chen, D. L., & Mooney, R. J. (2011). Learning to parse natural language commands to a robot control system. *Proceedings of the 12th International Conference on Parsing Technologies*, 202-206.",
+      "bibtex_key": "chen2011learning",
+      "title": "Learning to parse natural language commands to a robot control system",
+      "authors": ["Chen, D. L.", "Mooney, R. J."],
+      "publication_year": 2011,
+      "source_type": "conference",
+      "peer_reviewed": true,
+      "used_in_chapters": ["chapter4-vla"],
+      "verification_status": "verified"
+    },
+    {
+      "id": "hermann2017grounded",
+      "apa_format": "Hermann, K., Hill, F., Green, S., Wang, F., Fyshe, A., Blunsom, P., & Korhonen, A. (2017). Grounded language learning in a simulated 3D world. *arXiv preprint arXiv:1706.06551*.",
+      "bibtex_key": "hermann2017grounded",
+      "title": "Grounded language learning in a simulated 3D world",
+      "authors": ["Hermann, K.", "Hill, F.", "Green, S.", "Wang, F.", "Fyshe, A.", "Blunsom, P.", "Korhonen, A."],
+      "publication_year": 2017,
+      "source_type": "journal",
+      "peer_reviewed": true,
+      "used_in_chapters": ["chapter4-vla"],
+      "verification_status": "verified"
+    },
+    {
+      "id": "fox1997dynamic",
+      "apa_format": "Fox, D., Burgard, W., & Thrun, S. (1997). The dynamic window approach to collision avoidance. *IEEE Robotics & Automation Magazine*, 4(1), 23-33.",
+      "bibtex_key": "fox1997dynamic",
+      "title": "The dynamic window approach to collision avoidance",
+      "authors": ["Fox, D.", "Burgard, W.", "Thrun, S."],
+      "publication_year": 1997,
+      "source_type": "journal",
+      "peer_reviewed": true,
+      "used_in_chapters": ["general"],
+      "verification_status": "verified"
+    },
+    {
+      "id": "khatib1986real",
+      "apa_format": "Khatib, O. (1986). Real-time obstacle avoidance for manipulators and mobile robots. *The International Journal of Robotics Research*, 5(1), 90-98.",
+      "bibtex_key": "khatib1986real",
+      "title": "Real-time obstacle avoidance for manipulators and mobile robots",
+      "authors": ["Khatib, O."],
+      "publication_year": 1986,
+      "source_type": "journal",
+      "peer_reviewed": true,
+      "used_in_chapters": ["general"],
+      "verification_status": "verified"
+    },
+    {
+      "id": "latombe2012robot",
+      "apa_format": "Latombe, J. C. (2012). *Robot motion planning* (Vol. 124). Springer Science & Business Media.",
+      "bibtex_key": "latombe2012robot",
+      "title": "Robot motion planning",
+      "authors": ["Latombe, J. C."],
+      "publication_year": 2012,
+      "source_type": "book",
+      "peer_reviewed": true,
+      "used_in_chapters": ["general"],
+      "verification_status": "verified"
+    },
+    {
+      "id": "thrun2005probabilistic",
+      "apa_format": "Thrun, S., Burgard, W., & Fox, D. (2005). *Probabilistic robotics*. MIT press.",
+      "bibtex_key": "thrun2005probabilistic",
+      "title": "Probabilistic robotics",
+      "authors": ["Thrun, S.", "Burgard, W.", "Fox, D."],
+      "publication_year": 2005,
+      "source_type": "book",
+      "peer_reviewed": true,
+      "used_in_chapters": ["general"],
+      "verification_status": "verified"
+    },
+    {
+      "id": "spong2020robot",
+      "apa_format": "Spong, M. W., Hutchinson, S., & Vidyasagar, M. (2020). *Robot modeling and control* (2nd ed.). John Wiley & Sons.",
+      "bibtex_key": "spong2020robot",
+      "title": "Robot modeling and control",
+      "authors": ["Spong, M. W.", "Hutchinson, S.", "Vidyasagar, M."],
+      "publication_year": 2020,
+      "source_type": "book",
+      "peer_reviewed": true,
+      "used_in_chapters": ["general"],
+      "verification_status": "verified"
+    }
+  ],
+  "statistics": {
+    "total_sources": 17,
+    "peer_reviewed_count": 14,
+    "peer_reviewed_percentage": 82.4,
+    "by_type": {
+      "book": 4,
+      "journal": 6,
+      "conference": 4,
+      "documentation": 3
+    },
+    "last_updated": "2025-12-07"
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/hackathon-book/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/hackathon-book/docs",
+          "mainDocId": "preface/README",
+          "docs": [
+            {
+              "id": "appendix/hardware-setup/README",
+              "path": "/hackathon-book/docs/appendix/hardware-setup/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "appendix/lab-requirements/README",
+              "path": "/hackathon-book/docs/appendix/lab-requirements/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "appendix/README",
+              "path": "/hackathon-book/docs/appendix/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "appendix/tools-installation/gazebo",
+              "path": "/hackathon-book/docs/appendix/tools-installation/gazebo",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "appendix/tools-installation/isaac",
+              "path": "/hackathon-book/docs/appendix/tools-installation/isaac"
+            },
+            {
+              "id": "appendix/tools-installation/README",
+              "path": "/hackathon-book/docs/appendix/tools-installation/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "appendix/tools-installation/ros2",
+              "path": "/hackathon-book/docs/appendix/tools-installation/ros2",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "appendix/tools-installation/unity",
+              "path": "/hackathon-book/docs/appendix/tools-installation/unity",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "bibliography/references",
+              "path": "/hackathon-book/docs/bibliography/references",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-template",
+              "path": "/hackathon-book/docs/chapter-template"
+            },
+            {
+              "id": "modules/module1-ros2/chapter1-introduction/README",
+              "path": "/hackathon-book/docs/modules/module1-ros2/chapter1-introduction/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "modules/module1-ros2/chapter2-architecture/README",
+              "path": "/hackathon-book/docs/modules/module1-ros2/chapter2-architecture/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "modules/module1-ros2/chapter3-packages/README",
+              "path": "/hackathon-book/docs/modules/module1-ros2/chapter3-packages/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "modules/module1-ros2/chapter4-urdf/README",
+              "path": "/hackathon-book/docs/modules/module1-ros2/chapter4-urdf/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "modules/module1-ros2/chapter5-control/README",
+              "path": "/hackathon-book/docs/modules/module1-ros2/chapter5-control/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "modules/module1-ros2/preface",
+              "path": "/hackathon-book/docs/modules/module1-ros2/preface",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "modules/module2-digital-twin/chapter1-digital-twins/README",
+              "path": "/hackathon-book/docs/modules/module2-digital-twin/chapter1-digital-twins/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "modules/module2-digital-twin/chapter2-gazebo/README",
+              "path": "/hackathon-book/docs/modules/module2-digital-twin/chapter2-gazebo/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "modules/module2-digital-twin/chapter3-sensor-simulation/README",
+              "path": "/hackathon-book/docs/modules/module2-digital-twin/chapter3-sensor-simulation/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "modules/module2-digital-twin/chapter4-unity/README",
+              "path": "/hackathon-book/docs/modules/module2-digital-twin/chapter4-unity/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "modules/module2-digital-twin/chapter5-environment-building/README",
+              "path": "/hackathon-book/docs/modules/module2-digital-twin/chapter5-environment-building/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "modules/module2-digital-twin/preface",
+              "path": "/hackathon-book/docs/modules/module2-digital-twin/preface",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "modules/module3-ai-brain/chapter1-isaac-ecosystem/README",
+              "path": "/hackathon-book/docs/modules/module3-ai-brain/chapter1-isaac-ecosystem/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "modules/module3-ai-brain/chapter2-synthetic-data/README",
+              "path": "/hackathon-book/docs/modules/module3-ai-brain/chapter2-synthetic-data/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "modules/module3-ai-brain/chapter3-perception-pipelines/README",
+              "path": "/hackathon-book/docs/modules/module3-ai-brain/chapter3-perception-pipelines/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "modules/module3-ai-brain/chapter4-navigation/README",
+              "path": "/hackathon-book/docs/modules/module3-ai-brain/chapter4-navigation/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "modules/module3-ai-brain/chapter5-reinforcement-learning/README",
+              "path": "/hackathon-book/docs/modules/module3-ai-brain/chapter5-reinforcement-learning/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "modules/module3-ai-brain/preface",
+              "path": "/hackathon-book/docs/modules/module3-ai-brain/preface",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "modules/module4-vla/chapter1-vla-introduction/README",
+              "path": "/hackathon-book/docs/modules/module4-vla/chapter1-vla-introduction/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "modules/module4-vla/chapter2-voice-to-action/README",
+              "path": "/hackathon-book/docs/modules/module4-vla/chapter2-voice-to-action/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "modules/module4-vla/chapter3-cognitive-planning/README",
+              "path": "/hackathon-book/docs/modules/module4-vla/chapter3-cognitive-planning/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "modules/module4-vla/chapter4-multi-modal-perception/README",
+              "path": "/hackathon-book/docs/modules/module4-vla/chapter4-multi-modal-perception/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "modules/module4-vla/chapter5-capstone-project/README",
+              "path": "/hackathon-book/docs/modules/module4-vla/chapter5-capstone-project/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "modules/module4-vla/preface",
+              "path": "/hackathon-book/docs/modules/module4-vla/preface",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "preface/README",
+              "path": "/hackathon-book/docs/preface/",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/hackathon-book/docs/preface/",
+                "label": "Preface"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

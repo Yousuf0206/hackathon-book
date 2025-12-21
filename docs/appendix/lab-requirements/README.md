@@ -228,4 +228,4 @@ This appendix outlines the laboratory setup requirements for implementing the pr
 
 ---
 
-*Next: [Hardware Setup for Humanoid Robots](hardware-setup/humanoid-requirements.md)*
+*Next: [Hardware Setup Guide](../hardware-setup/README.md)*

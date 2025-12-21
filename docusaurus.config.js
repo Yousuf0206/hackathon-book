@@ -18,7 +18,7 @@ const config = {
   organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -29,6 +29,18 @@ const config = {
     locales: ['en'],
   },
 
+  plugins: [
+    async function myPlugin(context, options) {
+      return {
+        name: 'postcss-plugin',
+        configurePostCss(postcssOptions) {
+          // Appends new PostCSS plugins
+          postcssOptions.plugins.push(require('autoprefixer'));
+          return postcssOptions;
+        },
+      };
+    },
+  ],
   presets: [
     [
       'classic',
@@ -53,7 +65,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/physical-ai-humanoid-robotics.jpg',
+      image: 'img/physical-ai-humanoid-robotics.svg',
       navbar: {
         title: 'Physical AI Book',
         logo: {

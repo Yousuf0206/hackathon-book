@@ -1,0 +1,133 @@
+.personalization-controls {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.personalization-controls .controls-header {
+  margin-bottom: 1rem;
+}
+
+.personalization-controls .controls-header h3 {
+  margin: 0 0 0.5rem 0;
+  color: #2c3e50;
+  font-size: 1.1rem;
+}
+
+.personalization-controls .controls-header p {
+  margin: 0;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+.personalization-controls .controls-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.personalization-controls .controls-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.personalization-controls .controls-form select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: white;
+}
+
+.personalization-controls .button-group {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.personalization-controls .button-group button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #3498db;
+  background-color: #3498db;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.personalization-controls .button-group button:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.personalization-controls .button-group button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+  border-color: #bdc3c7;
+}
+
+.personalization-controls .button-group .reset-btn {
+  background-color: #e74c3c;
+  border-color: #e74c3c;
+}
+
+.personalization-controls .button-group .reset-btn:hover:not(:disabled) {
+  background-color: #c0392b;
+}
+
+.personalization-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+  color: #155724;
+  font-size: 0.9rem;
+}
+
+.status-indicator {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #28a745;
+}
+
+.status-indicator.active {
+  background-color: #28a745;
+}
+
+.personalization-prompt {
+  background: #e3f2fd;
+  border: 1px solid #bbdefb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.personalization-prompt .personalization-message h3 {
+  margin: 0 0 0.5rem 0;
+  color: #1976d2;
+}
+
+.personalization-prompt .personalization-message p {
+  margin: 0 0 1rem 0;
+  color: #5c6bc0;
+}
+
+.auth-link {
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}

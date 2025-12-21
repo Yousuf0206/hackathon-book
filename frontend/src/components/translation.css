@@ -1,0 +1,110 @@
+.translation-controls {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.translation-controls .controls-header {
+  margin-bottom: 1rem;
+}
+
+.translation-controls .controls-header h3 {
+  margin: 0 0 0.5rem 0;
+  color: #856404;
+  font-size: 1.1rem;
+}
+
+.translation-controls .controls-header p {
+  margin: 0;
+  color: #856404;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.translation-controls .button-group {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.translation-controls .button-group button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #f39c12;
+  background-color: #f39c12;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.translation-controls .button-group button:hover:not(:disabled) {
+  background-color: #e67e22;
+}
+
+.translation-controls .button-group button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+  border-color: #bdc3c7;
+}
+
+.translation-controls .button-group .reset-btn {
+  background-color: #e74c3c;
+  border-color: #e74c3c;
+}
+
+.translation-controls .button-group .reset-btn:hover:not(:disabled) {
+  background-color: #c0392b;
+}
+
+.translation-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+  color: #155724;
+  font-size: 0.9rem;
+}
+
+.translation-prompt {
+  background: #e3f2fd;
+  border: 1px solid #bbdefb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.translation-prompt .translation-message h3 {
+  margin: 0 0 0.5rem 0;
+  color: #1976d2;
+}
+
+.translation-prompt .translation-message p {
+  margin: 0 0 1rem 0;
+  color: #5c6bc0;
+}
+
+.translation-prompt .auth-link {
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.translation-prompt .auth-link:hover {
+  text-decoration: underline;
+}
+
+/* Right-to-left styling for Urdu text */
+.urdu-text {
+  direction: rtl;
+  text-align: right;
+  font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Urdu Typesetting', serif;
+  line-height: 1.8;
+}

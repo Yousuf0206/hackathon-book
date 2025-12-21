@@ -49,4 +49,4 @@ This module focuses on:
 
 ---
 
-*Next: [Chapter 1: Introduction to Physical AI & Robotics Foundations](./chapter1-introduction/README.md)*
+*Next: [Chapter 1: Introduction to Physical AI & Robotics Foundations](./chapter1-introduction/README.mdx)*

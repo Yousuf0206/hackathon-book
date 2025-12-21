@@ -1,0 +1,24 @@
+{
+  "id": "modules/module3-ai-brain/chapter1-isaac-ecosystem/README",
+  "title": "Chapter 1: NVIDIA Isaac Ecosystem Overview",
+  "description": "Learning Objectives",
+  "source": "@site/docs/modules/module3-ai-brain/chapter1-isaac-ecosystem/README.md",
+  "sourceDirName": "modules/module3-ai-brain/chapter1-isaac-ecosystem",
+  "slug": "/modules/module3-ai-brain/chapter1-isaac-ecosystem/",
+  "permalink": "/hackathon-book/docs/modules/module3-ai-brain/chapter1-isaac-ecosystem/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/modules/module3-ai-brain/chapter1-isaac-ecosystem/README.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Module 3: AI Brain - NVIDIA Isaac & Perception Systems",
+    "permalink": "/hackathon-book/docs/modules/module3-ai-brain/preface"
+  },
+  "next": {
+    "title": "Chapter 2: Photorealistic Simulation & Synthetic Data Generation",
+    "permalink": "/hackathon-book/docs/modules/module3-ai-brain/chapter2-synthetic-data/"
+  }
+}
