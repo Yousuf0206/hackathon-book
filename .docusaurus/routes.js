@@ -3,6 +3,41 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
+    path: '/hackathon-book/__docusaurus/debug',
+    component: ComponentCreator('/hackathon-book/__docusaurus/debug', 'c29'),
+    exact: true
+  },
+  {
+    path: '/hackathon-book/__docusaurus/debug/config',
+    component: ComponentCreator('/hackathon-book/__docusaurus/debug/config', 'ead'),
+    exact: true
+  },
+  {
+    path: '/hackathon-book/__docusaurus/debug/content',
+    component: ComponentCreator('/hackathon-book/__docusaurus/debug/content', '336'),
+    exact: true
+  },
+  {
+    path: '/hackathon-book/__docusaurus/debug/globalData',
+    component: ComponentCreator('/hackathon-book/__docusaurus/debug/globalData', 'bb6'),
+    exact: true
+  },
+  {
+    path: '/hackathon-book/__docusaurus/debug/metadata',
+    component: ComponentCreator('/hackathon-book/__docusaurus/debug/metadata', '644'),
+    exact: true
+  },
+  {
+    path: '/hackathon-book/__docusaurus/debug/registry',
+    component: ComponentCreator('/hackathon-book/__docusaurus/debug/registry', 'e50'),
+    exact: true
+  },
+  {
+    path: '/hackathon-book/__docusaurus/debug/routes',
+    component: ComponentCreator('/hackathon-book/__docusaurus/debug/routes', 'e1b'),
+    exact: true
+  },
+  {
     path: '/hackathon-book/docs',
     component: ComponentCreator('/hackathon-book/docs', 'd4a'),
     routes: [
