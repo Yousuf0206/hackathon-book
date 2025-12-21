@@ -1,205 +1,162 @@
 {
-  "/hackathon-book/__docusaurus/debug-c29": {
-    "__comp": "__comp---theme-debug-config-23-a-2ff",
-    "__context": {
-      "plugin": "plugin---hackathon-book-docusaurus-debugb-38-929"
-    }
-  },
-  "/hackathon-book/__docusaurus/debug/config-ead": {
-    "__comp": "__comp---theme-debug-config-23-a-2ff",
-    "__context": {
-      "plugin": "plugin---hackathon-book-docusaurus-debugb-38-929"
-    }
-  },
-  "/hackathon-book/__docusaurus/debug/content-336": {
-    "__comp": "__comp---theme-debug-contentba-8-ce7",
-    "__context": {
-      "plugin": "plugin---hackathon-book-docusaurus-debugb-38-929"
-    },
-    "__props": "__props---hackathon-book-docusaurus-debug-content-3-fd-924"
-  },
-  "/hackathon-book/__docusaurus/debug/globalData-bb6": {
-    "__comp": "__comp---theme-debug-global-dataede-0fa",
-    "__context": {
-      "plugin": "plugin---hackathon-book-docusaurus-debugb-38-929"
-    }
-  },
-  "/hackathon-book/__docusaurus/debug/metadata-644": {
-    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
-    "__context": {
-      "plugin": "plugin---hackathon-book-docusaurus-debugb-38-929"
-    }
-  },
-  "/hackathon-book/__docusaurus/debug/registry-e50": {
-    "__comp": "__comp---theme-debug-registry-679-501",
-    "__context": {
-      "plugin": "plugin---hackathon-book-docusaurus-debugb-38-929"
-    }
-  },
-  "/hackathon-book/__docusaurus/debug/routes-e1b": {
-    "__comp": "__comp---theme-debug-routes-946-699",
-    "__context": {
-      "plugin": "plugin---hackathon-book-docusaurus-debugb-38-929"
-    }
-  },
   "/hackathon-book/docs-d4a": {
-    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__comp": "5e95c892",
     "__context": {
-      "plugin": "plugin---hackathon-book-docsaba-da2"
+      "plugin": "aba21aa0"
     }
   },
   "/hackathon-book/docs-5f3": {
-    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
-    "__props": "__props---hackathon-book-docsb-21-b60"
+    "__comp": "a7bd4aaa",
+    "__props": "b21ca7de"
   },
   "/hackathon-book/docs-9fd": {
-    "__comp": "__comp---theme-doc-roota-94-67a"
+    "__comp": "a94703ab"
   },
   "/hackathon-book/docs/appendix/-311": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-appendix-21-a-66b"
+    "__comp": "17896441",
+    "content": "21a9da9a"
   },
   "/hackathon-book/docs/appendix/hardware-setup/-4b8": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-appendix-hardware-setup-91-c-212"
+    "__comp": "17896441",
+    "content": "91c9ca6b"
   },
   "/hackathon-book/docs/appendix/lab-requirements/-142": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-appendix-lab-requirements-59-d-1e0"
+    "__comp": "17896441",
+    "content": "59d592a5"
   },
   "/hackathon-book/docs/appendix/tools-installation/-235": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-appendix-tools-installation-623-422"
+    "__comp": "17896441",
+    "content": "62307c37"
   },
   "/hackathon-book/docs/appendix/tools-installation/gazebo-03f": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-appendix-tools-installation-gazeboe-46-38b"
+    "__comp": "17896441",
+    "content": "e4643caa"
   },
   "/hackathon-book/docs/appendix/tools-installation/isaac-d94": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-appendix-tools-installation-isaac-736-6df"
+    "__comp": "17896441",
+    "content": "73639772"
   },
   "/hackathon-book/docs/appendix/tools-installation/ros2-4d3": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-appendix-tools-installation-ros-23-d-8-59a"
+    "__comp": "17896441",
+    "content": "3d864e0c"
   },
   "/hackathon-book/docs/appendix/tools-installation/unity-cdd": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-appendix-tools-installation-unity-842-a1d"
+    "__comp": "17896441",
+    "content": "842521ef"
   },
   "/hackathon-book/docs/bibliography/references-15f": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-bibliography-referencesfc-5-79e"
+    "__comp": "17896441",
+    "content": "fc57e47f"
   },
   "/hackathon-book/docs/chapter-template-2cc": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-chapter-template-98-e-3b5"
+    "__comp": "17896441",
+    "content": "98e686ab"
   },
   "/hackathon-book/docs/modules/module1-ros2/chapter1-introduction/-2c6": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-modules-module-1-ros-2-chapter-1-introduction-f-11-539"
+    "__comp": "17896441",
+    "content": "f1147815"
   },
   "/hackathon-book/docs/modules/module1-ros2/chapter2-architecture/-6c3": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-modules-module-1-ros-2-chapter-2-architecture-8-d-3-87c"
+    "__comp": "17896441",
+    "content": "8d3edecd"
   },
   "/hackathon-book/docs/modules/module1-ros2/chapter3-packages/-d6f": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-modules-module-1-ros-2-chapter-3-packages-446-5bf"
+    "__comp": "17896441",
+    "content": "446b59e1"
   },
   "/hackathon-book/docs/modules/module1-ros2/chapter4-urdf/-233": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-modules-module-1-ros-2-chapter-4-urdf-7-f-2-dbc"
+    "__comp": "17896441",
+    "content": "7f23d70d"
   },
   "/hackathon-book/docs/modules/module1-ros2/chapter5-control/-772": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-modules-module-1-ros-2-chapter-5-control-988-bef"
+    "__comp": "17896441",
+    "content": "988ca710"
   },
   "/hackathon-book/docs/modules/module1-ros2/preface-28c": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-modules-module-1-ros-2-preface-56-b-97b"
+    "__comp": "17896441",
+    "content": "56b7f761"
   },
   "/hackathon-book/docs/modules/module2-digital-twin/chapter1-digital-twins/-8cb": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-modules-module-2-digital-twin-chapter-1-digital-twins-2-de-6f9"
+    "__comp": "17896441",
+    "content": "2deeb7b8"
   },
   "/hackathon-book/docs/modules/module2-digital-twin/chapter2-gazebo/-97d": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-modules-module-2-digital-twin-chapter-2-gazebo-3-c-9-712"
+    "__comp": "17896441",
+    "content": "3c9b886d"
   },
   "/hackathon-book/docs/modules/module2-digital-twin/chapter3-sensor-simulation/-b98": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-modules-module-2-digital-twin-chapter-3-sensor-simulation-71-e-b11"
+    "__comp": "17896441",
+    "content": "71e66182"
   },
   "/hackathon-book/docs/modules/module2-digital-twin/chapter4-unity/-fec": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-modules-module-2-digital-twin-chapter-4-unity-8-ab-3a3"
+    "__comp": "17896441",
+    "content": "8ab35eb3"
   },
   "/hackathon-book/docs/modules/module2-digital-twin/chapter5-environment-building/-6fa": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-modules-module-2-digital-twin-chapter-5-environment-building-39-f-93c"
+    "__comp": "17896441",
+    "content": "39fed824"
   },
   "/hackathon-book/docs/modules/module2-digital-twin/preface-20f": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-modules-module-2-digital-twin-preface-01-e-eab"
+    "__comp": "17896441",
+    "content": "01e7c8c6"
   },
   "/hackathon-book/docs/modules/module3-ai-brain/chapter1-isaac-ecosystem/-696": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-modules-module-3-ai-brain-chapter-1-isaac-ecosystem-357-2d5"
+    "__comp": "17896441",
+    "content": "35714c99"
   },
   "/hackathon-book/docs/modules/module3-ai-brain/chapter2-synthetic-data/-8db": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-modules-module-3-ai-brain-chapter-2-synthetic-data-d-0-a-957"
+    "__comp": "17896441",
+    "content": "d0a0345f"
   },
   "/hackathon-book/docs/modules/module3-ai-brain/chapter3-perception-pipelines/-48c": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-modules-module-3-ai-brain-chapter-3-perception-pipelines-126-6fe"
+    "__comp": "17896441",
+    "content": "1260862d"
   },
   "/hackathon-book/docs/modules/module3-ai-brain/chapter4-navigation/-d7d": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-modules-module-3-ai-brain-chapter-4-navigation-44-a-49a"
+    "__comp": "17896441",
+    "content": "44ac2fa0"
   },
   "/hackathon-book/docs/modules/module3-ai-brain/chapter5-reinforcement-learning/-afe": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-modules-module-3-ai-brain-chapter-5-reinforcement-learning-115-a20"
+    "__comp": "17896441",
+    "content": "11548216"
   },
   "/hackathon-book/docs/modules/module3-ai-brain/preface-5f4": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-modules-module-3-ai-brain-prefacefe-3-af3"
+    "__comp": "17896441",
+    "content": "fe3017bc"
   },
   "/hackathon-book/docs/modules/module4-vla/chapter1-vla-introduction/-980": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-modules-module-4-vla-chapter-1-vla-introduction-403-4b2"
+    "__comp": "17896441",
+    "content": "40396966"
   },
   "/hackathon-book/docs/modules/module4-vla/chapter2-voice-to-action/-391": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-modules-module-4-vla-chapter-2-voice-to-action-68-d-a9c"
+    "__comp": "17896441",
+    "content": "68da38b8"
   },
   "/hackathon-book/docs/modules/module4-vla/chapter3-cognitive-planning/-42b": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-modules-module-4-vla-chapter-3-cognitive-planning-58-d-6c4"
+    "__comp": "17896441",
+    "content": "58df9e55"
   },
   "/hackathon-book/docs/modules/module4-vla/chapter4-multi-modal-perception/-97d": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-modules-module-4-vla-chapter-4-multi-modal-perception-252-b0e"
+    "__comp": "17896441",
+    "content": "25222952"
   },
   "/hackathon-book/docs/modules/module4-vla/chapter5-capstone-project/-caf": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-modules-module-4-vla-chapter-5-capstone-project-33-a-73a"
+    "__comp": "17896441",
+    "content": "33a666e8"
   },
   "/hackathon-book/docs/modules/module4-vla/preface-5bf": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-modules-module-4-vla-preface-90-f-497"
+    "__comp": "17896441",
+    "content": "90feebe7"
   },
   "/hackathon-book/docs/preface/-bec": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---hackathon-book-docs-preface-47-a-8c0"
+    "__comp": "17896441",
+    "content": "47a40265"
   },
   "/hackathon-book/-ee1": {
-    "__comp": "__comp---site-src-pages-index-jsc-4-f-f99",
+    "__comp": "c4f5d8e4",
     "__context": {
-      "plugin": "plugin---hackathon-book-a-74-813"
+      "plugin": "a7456010"
     },
-    "config": "config---hackathon-book-5-e-9-245"
+    "config": "5e9f5e1a"
   }
 }

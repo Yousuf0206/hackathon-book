@@ -188,4 +188,4 @@ This appendix provides detailed hardware requirements and setup recommendations 
 
 ---
 
-*Next: [Tools Installation Guide](tools-installation/README.md)*
+*Next: [Tools Installation Guide](../tools-installation/README.md)*
