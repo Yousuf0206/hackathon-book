@@ -5,7 +5,7 @@
   "source": "@site/docs/modules/module1-ros2/chapter5-control/README.md",
   "sourceDirName": "modules/module1-ros2/chapter5-control",
   "slug": "/modules/module1-ros2/chapter5-control/",
-  "permalink": "/hackathon-book/docs/modules/module1-ros2/chapter5-control/",
+  "permalink": "/docs/modules/module1-ros2/chapter5-control/",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/modules/module1-ros2/chapter5-control/README.md",
@@ -15,10 +15,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Chapter 4: Robot Description Formats (URDF for humanoid robots)",
-    "permalink": "/hackathon-book/docs/modules/module1-ros2/chapter4-urdf/"
+    "permalink": "/docs/modules/module1-ros2/chapter4-urdf/"
   },
   "next": {
     "title": "Module 2: Digital Twins - Simulation for Physical AI",
-    "permalink": "/hackathon-book/docs/modules/module2-digital-twin/preface"
+    "permalink": "/docs/modules/module2-digital-twin/preface"
   }
 }

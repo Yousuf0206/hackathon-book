@@ -5,7 +5,7 @@
   "source": "@site/docs/chapter-template.md",
   "sourceDirName": ".",
   "slug": "/chapter-template",
-  "permalink": "/hackathon-book/docs/chapter-template",
+  "permalink": "/docs/chapter-template",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-template.md",

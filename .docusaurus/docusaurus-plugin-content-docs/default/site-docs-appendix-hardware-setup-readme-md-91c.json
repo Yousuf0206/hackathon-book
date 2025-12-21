@@ -5,7 +5,7 @@
   "source": "@site/docs/appendix/hardware-setup/README.md",
   "sourceDirName": "appendix/hardware-setup",
   "slug": "/appendix/hardware-setup/",
-  "permalink": "/hackathon-book/docs/appendix/hardware-setup/",
+  "permalink": "/docs/appendix/hardware-setup/",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/appendix/hardware-setup/README.md",
@@ -15,10 +15,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Appendix",
-    "permalink": "/hackathon-book/docs/appendix/"
+    "permalink": "/docs/appendix/"
   },
   "next": {
     "title": "Appendix: Lab Requirements for Physical AI & Humanoid Robotics",
-    "permalink": "/hackathon-book/docs/appendix/lab-requirements/"
+    "permalink": "/docs/appendix/lab-requirements/"
   }
 }

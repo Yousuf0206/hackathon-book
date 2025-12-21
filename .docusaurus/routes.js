@@ -3,257 +3,222 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
-    path: '/hackathon-book/__docusaurus/debug',
-    component: ComponentCreator('/hackathon-book/__docusaurus/debug', 'c29'),
-    exact: true
-  },
-  {
-    path: '/hackathon-book/__docusaurus/debug/config',
-    component: ComponentCreator('/hackathon-book/__docusaurus/debug/config', 'ead'),
-    exact: true
-  },
-  {
-    path: '/hackathon-book/__docusaurus/debug/content',
-    component: ComponentCreator('/hackathon-book/__docusaurus/debug/content', '336'),
-    exact: true
-  },
-  {
-    path: '/hackathon-book/__docusaurus/debug/globalData',
-    component: ComponentCreator('/hackathon-book/__docusaurus/debug/globalData', 'bb6'),
-    exact: true
-  },
-  {
-    path: '/hackathon-book/__docusaurus/debug/metadata',
-    component: ComponentCreator('/hackathon-book/__docusaurus/debug/metadata', '644'),
-    exact: true
-  },
-  {
-    path: '/hackathon-book/__docusaurus/debug/registry',
-    component: ComponentCreator('/hackathon-book/__docusaurus/debug/registry', 'e50'),
-    exact: true
-  },
-  {
-    path: '/hackathon-book/__docusaurus/debug/routes',
-    component: ComponentCreator('/hackathon-book/__docusaurus/debug/routes', 'e1b'),
-    exact: true
-  },
-  {
-    path: '/hackathon-book/docs',
-    component: ComponentCreator('/hackathon-book/docs', 'd4a'),
+    path: '/docs',
+    component: ComponentCreator('/docs', '2cf'),
     routes: [
       {
-        path: '/hackathon-book/docs',
-        component: ComponentCreator('/hackathon-book/docs', '5f3'),
+        path: '/docs',
+        component: ComponentCreator('/docs', '17d'),
         routes: [
           {
-            path: '/hackathon-book/docs',
-            component: ComponentCreator('/hackathon-book/docs', '9fd'),
+            path: '/docs',
+            component: ComponentCreator('/docs', '9d5'),
             routes: [
               {
-                path: '/hackathon-book/docs/appendix/',
-                component: ComponentCreator('/hackathon-book/docs/appendix/', '311'),
+                path: '/docs/appendix/',
+                component: ComponentCreator('/docs/appendix/', 'e3d'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/appendix/hardware-setup/',
-                component: ComponentCreator('/hackathon-book/docs/appendix/hardware-setup/', '4b8'),
+                path: '/docs/appendix/hardware-setup/',
+                component: ComponentCreator('/docs/appendix/hardware-setup/', '48b'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/appendix/lab-requirements/',
-                component: ComponentCreator('/hackathon-book/docs/appendix/lab-requirements/', '142'),
+                path: '/docs/appendix/lab-requirements/',
+                component: ComponentCreator('/docs/appendix/lab-requirements/', '732'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/appendix/tools-installation/',
-                component: ComponentCreator('/hackathon-book/docs/appendix/tools-installation/', '235'),
+                path: '/docs/appendix/tools-installation/',
+                component: ComponentCreator('/docs/appendix/tools-installation/', '14c'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/appendix/tools-installation/gazebo',
-                component: ComponentCreator('/hackathon-book/docs/appendix/tools-installation/gazebo', '03f'),
+                path: '/docs/appendix/tools-installation/gazebo',
+                component: ComponentCreator('/docs/appendix/tools-installation/gazebo', 'b03'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/appendix/tools-installation/isaac',
-                component: ComponentCreator('/hackathon-book/docs/appendix/tools-installation/isaac', 'd94'),
+                path: '/docs/appendix/tools-installation/isaac',
+                component: ComponentCreator('/docs/appendix/tools-installation/isaac', '0f4'),
                 exact: true
               },
               {
-                path: '/hackathon-book/docs/appendix/tools-installation/ros2',
-                component: ComponentCreator('/hackathon-book/docs/appendix/tools-installation/ros2', '4d3'),
+                path: '/docs/appendix/tools-installation/ros2',
+                component: ComponentCreator('/docs/appendix/tools-installation/ros2', 'c87'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/appendix/tools-installation/unity',
-                component: ComponentCreator('/hackathon-book/docs/appendix/tools-installation/unity', 'cdd'),
+                path: '/docs/appendix/tools-installation/unity',
+                component: ComponentCreator('/docs/appendix/tools-installation/unity', '4d0'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/bibliography/references',
-                component: ComponentCreator('/hackathon-book/docs/bibliography/references', '15f'),
+                path: '/docs/bibliography/references',
+                component: ComponentCreator('/docs/bibliography/references', '244'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/chapter-template',
-                component: ComponentCreator('/hackathon-book/docs/chapter-template', '2cc'),
+                path: '/docs/chapter-template',
+                component: ComponentCreator('/docs/chapter-template', '7f6'),
                 exact: true
               },
               {
-                path: '/hackathon-book/docs/modules/module1-ros2/chapter1-introduction/',
-                component: ComponentCreator('/hackathon-book/docs/modules/module1-ros2/chapter1-introduction/', '2c6'),
+                path: '/docs/modules/module1-ros2/chapter1-introduction/',
+                component: ComponentCreator('/docs/modules/module1-ros2/chapter1-introduction/', '81b'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/modules/module1-ros2/chapter2-architecture/',
-                component: ComponentCreator('/hackathon-book/docs/modules/module1-ros2/chapter2-architecture/', '6c3'),
+                path: '/docs/modules/module1-ros2/chapter2-architecture/',
+                component: ComponentCreator('/docs/modules/module1-ros2/chapter2-architecture/', '037'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/modules/module1-ros2/chapter3-packages/',
-                component: ComponentCreator('/hackathon-book/docs/modules/module1-ros2/chapter3-packages/', 'd6f'),
+                path: '/docs/modules/module1-ros2/chapter3-packages/',
+                component: ComponentCreator('/docs/modules/module1-ros2/chapter3-packages/', 'f08'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/modules/module1-ros2/chapter4-urdf/',
-                component: ComponentCreator('/hackathon-book/docs/modules/module1-ros2/chapter4-urdf/', '233'),
+                path: '/docs/modules/module1-ros2/chapter4-urdf/',
+                component: ComponentCreator('/docs/modules/module1-ros2/chapter4-urdf/', 'a5c'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/modules/module1-ros2/chapter5-control/',
-                component: ComponentCreator('/hackathon-book/docs/modules/module1-ros2/chapter5-control/', '772'),
+                path: '/docs/modules/module1-ros2/chapter5-control/',
+                component: ComponentCreator('/docs/modules/module1-ros2/chapter5-control/', '4ec'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/modules/module1-ros2/preface',
-                component: ComponentCreator('/hackathon-book/docs/modules/module1-ros2/preface', '28c'),
+                path: '/docs/modules/module1-ros2/preface',
+                component: ComponentCreator('/docs/modules/module1-ros2/preface', '6a8'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/modules/module2-digital-twin/chapter1-digital-twins/',
-                component: ComponentCreator('/hackathon-book/docs/modules/module2-digital-twin/chapter1-digital-twins/', '8cb'),
+                path: '/docs/modules/module2-digital-twin/chapter1-digital-twins/',
+                component: ComponentCreator('/docs/modules/module2-digital-twin/chapter1-digital-twins/', '30a'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/modules/module2-digital-twin/chapter2-gazebo/',
-                component: ComponentCreator('/hackathon-book/docs/modules/module2-digital-twin/chapter2-gazebo/', '97d'),
+                path: '/docs/modules/module2-digital-twin/chapter2-gazebo/',
+                component: ComponentCreator('/docs/modules/module2-digital-twin/chapter2-gazebo/', '12d'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/modules/module2-digital-twin/chapter3-sensor-simulation/',
-                component: ComponentCreator('/hackathon-book/docs/modules/module2-digital-twin/chapter3-sensor-simulation/', 'b98'),
+                path: '/docs/modules/module2-digital-twin/chapter3-sensor-simulation/',
+                component: ComponentCreator('/docs/modules/module2-digital-twin/chapter3-sensor-simulation/', 'f09'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/modules/module2-digital-twin/chapter4-unity/',
-                component: ComponentCreator('/hackathon-book/docs/modules/module2-digital-twin/chapter4-unity/', 'fec'),
+                path: '/docs/modules/module2-digital-twin/chapter4-unity/',
+                component: ComponentCreator('/docs/modules/module2-digital-twin/chapter4-unity/', '286'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/modules/module2-digital-twin/chapter5-environment-building/',
-                component: ComponentCreator('/hackathon-book/docs/modules/module2-digital-twin/chapter5-environment-building/', '6fa'),
+                path: '/docs/modules/module2-digital-twin/chapter5-environment-building/',
+                component: ComponentCreator('/docs/modules/module2-digital-twin/chapter5-environment-building/', 'b9b'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/modules/module2-digital-twin/preface',
-                component: ComponentCreator('/hackathon-book/docs/modules/module2-digital-twin/preface', '20f'),
+                path: '/docs/modules/module2-digital-twin/preface',
+                component: ComponentCreator('/docs/modules/module2-digital-twin/preface', 'a55'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/modules/module3-ai-brain/chapter1-isaac-ecosystem/',
-                component: ComponentCreator('/hackathon-book/docs/modules/module3-ai-brain/chapter1-isaac-ecosystem/', '696'),
+                path: '/docs/modules/module3-ai-brain/chapter1-isaac-ecosystem/',
+                component: ComponentCreator('/docs/modules/module3-ai-brain/chapter1-isaac-ecosystem/', '6c0'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/modules/module3-ai-brain/chapter2-synthetic-data/',
-                component: ComponentCreator('/hackathon-book/docs/modules/module3-ai-brain/chapter2-synthetic-data/', '8db'),
+                path: '/docs/modules/module3-ai-brain/chapter2-synthetic-data/',
+                component: ComponentCreator('/docs/modules/module3-ai-brain/chapter2-synthetic-data/', '271'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/modules/module3-ai-brain/chapter3-perception-pipelines/',
-                component: ComponentCreator('/hackathon-book/docs/modules/module3-ai-brain/chapter3-perception-pipelines/', '48c'),
+                path: '/docs/modules/module3-ai-brain/chapter3-perception-pipelines/',
+                component: ComponentCreator('/docs/modules/module3-ai-brain/chapter3-perception-pipelines/', 'e99'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/modules/module3-ai-brain/chapter4-navigation/',
-                component: ComponentCreator('/hackathon-book/docs/modules/module3-ai-brain/chapter4-navigation/', 'd7d'),
+                path: '/docs/modules/module3-ai-brain/chapter4-navigation/',
+                component: ComponentCreator('/docs/modules/module3-ai-brain/chapter4-navigation/', '672'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/modules/module3-ai-brain/chapter5-reinforcement-learning/',
-                component: ComponentCreator('/hackathon-book/docs/modules/module3-ai-brain/chapter5-reinforcement-learning/', 'afe'),
+                path: '/docs/modules/module3-ai-brain/chapter5-reinforcement-learning/',
+                component: ComponentCreator('/docs/modules/module3-ai-brain/chapter5-reinforcement-learning/', '514'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/modules/module3-ai-brain/preface',
-                component: ComponentCreator('/hackathon-book/docs/modules/module3-ai-brain/preface', '5f4'),
+                path: '/docs/modules/module3-ai-brain/preface',
+                component: ComponentCreator('/docs/modules/module3-ai-brain/preface', '88e'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/modules/module4-vla/chapter1-vla-introduction/',
-                component: ComponentCreator('/hackathon-book/docs/modules/module4-vla/chapter1-vla-introduction/', '980'),
+                path: '/docs/modules/module4-vla/chapter1-vla-introduction/',
+                component: ComponentCreator('/docs/modules/module4-vla/chapter1-vla-introduction/', '082'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/modules/module4-vla/chapter2-voice-to-action/',
-                component: ComponentCreator('/hackathon-book/docs/modules/module4-vla/chapter2-voice-to-action/', '391'),
+                path: '/docs/modules/module4-vla/chapter2-voice-to-action/',
+                component: ComponentCreator('/docs/modules/module4-vla/chapter2-voice-to-action/', '6cf'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/modules/module4-vla/chapter3-cognitive-planning/',
-                component: ComponentCreator('/hackathon-book/docs/modules/module4-vla/chapter3-cognitive-planning/', '42b'),
+                path: '/docs/modules/module4-vla/chapter3-cognitive-planning/',
+                component: ComponentCreator('/docs/modules/module4-vla/chapter3-cognitive-planning/', '4e4'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/modules/module4-vla/chapter4-multi-modal-perception/',
-                component: ComponentCreator('/hackathon-book/docs/modules/module4-vla/chapter4-multi-modal-perception/', '97d'),
+                path: '/docs/modules/module4-vla/chapter4-multi-modal-perception/',
+                component: ComponentCreator('/docs/modules/module4-vla/chapter4-multi-modal-perception/', 'c97'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/modules/module4-vla/chapter5-capstone-project/',
-                component: ComponentCreator('/hackathon-book/docs/modules/module4-vla/chapter5-capstone-project/', 'caf'),
+                path: '/docs/modules/module4-vla/chapter5-capstone-project/',
+                component: ComponentCreator('/docs/modules/module4-vla/chapter5-capstone-project/', '925'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/modules/module4-vla/preface',
-                component: ComponentCreator('/hackathon-book/docs/modules/module4-vla/preface', '5bf'),
+                path: '/docs/modules/module4-vla/preface',
+                component: ComponentCreator('/docs/modules/module4-vla/preface', '7c2'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/hackathon-book/docs/preface/',
-                component: ComponentCreator('/hackathon-book/docs/preface/', 'bec'),
+                path: '/docs/preface/',
+                component: ComponentCreator('/docs/preface/', '2c8'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               }
@@ -264,8 +229,8 @@ export default [
     ]
   },
   {
-    path: '/hackathon-book/',
-    component: ComponentCreator('/hackathon-book/', 'ee1'),
+    path: '/',
+    component: ComponentCreator('/', '2e1'),
     exact: true
   },
   {

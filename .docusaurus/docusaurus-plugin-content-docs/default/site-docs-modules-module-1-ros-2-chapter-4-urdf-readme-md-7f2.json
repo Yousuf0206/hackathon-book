@@ -5,7 +5,7 @@
   "source": "@site/docs/modules/module1-ros2/chapter4-urdf/README.md",
   "sourceDirName": "modules/module1-ros2/chapter4-urdf",
   "slug": "/modules/module1-ros2/chapter4-urdf/",
-  "permalink": "/hackathon-book/docs/modules/module1-ros2/chapter4-urdf/",
+  "permalink": "/docs/modules/module1-ros2/chapter4-urdf/",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/modules/module1-ros2/chapter4-urdf/README.md",
@@ -15,10 +15,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Chapter 3: Building ROS 2 Packages with rclpy",
-    "permalink": "/hackathon-book/docs/modules/module1-ros2/chapter3-packages/"
+    "permalink": "/docs/modules/module1-ros2/chapter3-packages/"
   },
   "next": {
     "title": "Chapter 5: Real-Time Control Concepts",
-    "permalink": "/hackathon-book/docs/modules/module1-ros2/chapter5-control/"
+    "permalink": "/docs/modules/module1-ros2/chapter5-control/"
   }
 }

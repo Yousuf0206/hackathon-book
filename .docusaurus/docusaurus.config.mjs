@@ -8,7 +8,7 @@ export default {
   "tagline": "A Comprehensive Guide to ROS 2, Gazebo, Unity, NVIDIA Isaac, and VLA Technologies",
   "favicon": "img/favicon.ico",
   "url": "https://your-docusaurus-site.example.com",
-  "baseUrl": "/hackathon-book/",
+  "baseUrl": "/",
   "organizationName": "facebook",
   "projectName": "docusaurus",
   "onBrokenLinks": "warn",

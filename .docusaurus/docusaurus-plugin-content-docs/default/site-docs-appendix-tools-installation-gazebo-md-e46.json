@@ -5,7 +5,7 @@
   "source": "@site/docs/appendix/tools-installation/gazebo.md",
   "sourceDirName": "appendix/tools-installation",
   "slug": "/appendix/tools-installation/gazebo",
-  "permalink": "/hackathon-book/docs/appendix/tools-installation/gazebo",
+  "permalink": "/docs/appendix/tools-installation/gazebo",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/appendix/tools-installation/gazebo.md",
@@ -15,10 +15,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Installation Guide: ROS 2 (Robot Operating System 2)",
-    "permalink": "/hackathon-book/docs/appendix/tools-installation/ros2"
+    "permalink": "/docs/appendix/tools-installation/ros2"
   },
   "next": {
     "title": "Installation Guide: Unity (Unity Hub and Unity 2022.3 LTS)",
-    "permalink": "/hackathon-book/docs/appendix/tools-installation/unity"
+    "permalink": "/docs/appendix/tools-installation/unity"
   }
 }

@@ -5,7 +5,7 @@
   "source": "@site/docs/preface/README.md",
   "sourceDirName": "preface",
   "slug": "/preface/",
-  "permalink": "/hackathon-book/docs/preface/",
+  "permalink": "/docs/preface/",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/preface/README.md",
@@ -15,6 +15,6 @@
   "sidebar": "tutorialSidebar",
   "next": {
     "title": "Preface",
-    "permalink": "/hackathon-book/docs/preface/"
+    "permalink": "/docs/preface/"
   }
 }

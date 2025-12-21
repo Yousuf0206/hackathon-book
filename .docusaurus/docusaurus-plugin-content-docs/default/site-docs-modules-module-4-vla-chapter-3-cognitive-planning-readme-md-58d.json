@@ -5,7 +5,7 @@
   "source": "@site/docs/modules/module4-vla/chapter3-cognitive-planning/README.md",
   "sourceDirName": "modules/module4-vla/chapter3-cognitive-planning",
   "slug": "/modules/module4-vla/chapter3-cognitive-planning/",
-  "permalink": "/hackathon-book/docs/modules/module4-vla/chapter3-cognitive-planning/",
+  "permalink": "/docs/modules/module4-vla/chapter3-cognitive-planning/",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/modules/module4-vla/chapter3-cognitive-planning/README.md",
@@ -15,10 +15,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Chapter 2: Voice-to-Action Pipeline",
-    "permalink": "/hackathon-book/docs/modules/module4-vla/chapter2-voice-to-action/"
+    "permalink": "/docs/modules/module4-vla/chapter2-voice-to-action/"
   },
   "next": {
     "title": "Chapter 4: Multi-Modal Perception",
-    "permalink": "/hackathon-book/docs/modules/module4-vla/chapter4-multi-modal-perception/"
+    "permalink": "/docs/modules/module4-vla/chapter4-multi-modal-perception/"
   }
 }

@@ -5,7 +5,7 @@
   "source": "@site/docs/modules/module4-vla/preface.md",
   "sourceDirName": "modules/module4-vla",
   "slug": "/modules/module4-vla/preface",
-  "permalink": "/hackathon-book/docs/modules/module4-vla/preface",
+  "permalink": "/docs/modules/module4-vla/preface",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/modules/module4-vla/preface.md",
@@ -15,10 +15,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Chapter 5: Reinforcement Learning & Sim-to-Real Transfer",
-    "permalink": "/hackathon-book/docs/modules/module3-ai-brain/chapter5-reinforcement-learning/"
+    "permalink": "/docs/modules/module3-ai-brain/chapter5-reinforcement-learning/"
   },
   "next": {
     "title": "Module 4: Vision-Language-Action (VLA) - Advanced AI Integration",
-    "permalink": "/hackathon-book/docs/modules/module4-vla/preface"
+    "permalink": "/docs/modules/module4-vla/preface"
   }
 }

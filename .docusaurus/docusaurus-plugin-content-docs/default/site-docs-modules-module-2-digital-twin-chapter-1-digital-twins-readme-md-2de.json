@@ -5,7 +5,7 @@
   "source": "@site/docs/modules/module2-digital-twin/chapter1-digital-twins/README.md",
   "sourceDirName": "modules/module2-digital-twin/chapter1-digital-twins",
   "slug": "/modules/module2-digital-twin/chapter1-digital-twins/",
-  "permalink": "/hackathon-book/docs/modules/module2-digital-twin/chapter1-digital-twins/",
+  "permalink": "/docs/modules/module2-digital-twin/chapter1-digital-twins/",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/modules/module2-digital-twin/chapter1-digital-twins/README.md",
@@ -15,10 +15,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Module 2: Digital Twins - Simulation for Physical AI",
-    "permalink": "/hackathon-book/docs/modules/module2-digital-twin/preface"
+    "permalink": "/docs/modules/module2-digital-twin/preface"
   },
   "next": {
     "title": "Chapter 2: Gazebo Fundamentals",
-    "permalink": "/hackathon-book/docs/modules/module2-digital-twin/chapter2-gazebo/"
+    "permalink": "/docs/modules/module2-digital-twin/chapter2-gazebo/"
   }
 }

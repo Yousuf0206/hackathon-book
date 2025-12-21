@@ -5,7 +5,7 @@
   "source": "@site/docs/appendix/tools-installation/unity.md",
   "sourceDirName": "appendix/tools-installation",
   "slug": "/appendix/tools-installation/unity",
-  "permalink": "/hackathon-book/docs/appendix/tools-installation/unity",
+  "permalink": "/docs/appendix/tools-installation/unity",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/appendix/tools-installation/unity.md",
@@ -15,10 +15,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Installation Guide: Gazebo (Garden)",
-    "permalink": "/hackathon-book/docs/appendix/tools-installation/gazebo"
+    "permalink": "/docs/appendix/tools-installation/gazebo"
   },
   "next": {
     "title": "Bibliography",
-    "permalink": "/hackathon-book/docs/bibliography/references"
+    "permalink": "/docs/bibliography/references"
   }
 }

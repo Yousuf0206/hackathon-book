@@ -5,7 +5,7 @@
   "source": "@site/docs/modules/module4-vla/chapter2-voice-to-action/README.md",
   "sourceDirName": "modules/module4-vla/chapter2-voice-to-action",
   "slug": "/modules/module4-vla/chapter2-voice-to-action/",
-  "permalink": "/hackathon-book/docs/modules/module4-vla/chapter2-voice-to-action/",
+  "permalink": "/docs/modules/module4-vla/chapter2-voice-to-action/",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/modules/module4-vla/chapter2-voice-to-action/README.md",
@@ -15,10 +15,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Chapter 1: Introduction to VLA Robotics",
-    "permalink": "/hackathon-book/docs/modules/module4-vla/chapter1-vla-introduction/"
+    "permalink": "/docs/modules/module4-vla/chapter1-vla-introduction/"
   },
   "next": {
     "title": "Chapter 3: Cognitive Planning Using LLMs",
-    "permalink": "/hackathon-book/docs/modules/module4-vla/chapter3-cognitive-planning/"
+    "permalink": "/docs/modules/module4-vla/chapter3-cognitive-planning/"
   }
 }

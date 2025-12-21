@@ -5,7 +5,7 @@
   "source": "@site/docs/modules/module3-ai-brain/chapter3-perception-pipelines/README.md",
   "sourceDirName": "modules/module3-ai-brain/chapter3-perception-pipelines",
   "slug": "/modules/module3-ai-brain/chapter3-perception-pipelines/",
-  "permalink": "/hackathon-book/docs/modules/module3-ai-brain/chapter3-perception-pipelines/",
+  "permalink": "/docs/modules/module3-ai-brain/chapter3-perception-pipelines/",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/modules/module3-ai-brain/chapter3-perception-pipelines/README.md",
@@ -15,10 +15,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Chapter 2: Photorealistic Simulation & Synthetic Data Generation",
-    "permalink": "/hackathon-book/docs/modules/module3-ai-brain/chapter2-synthetic-data/"
+    "permalink": "/docs/modules/module3-ai-brain/chapter2-synthetic-data/"
   },
   "next": {
     "title": "Chapter 4: Navigation & Path Planning",
-    "permalink": "/hackathon-book/docs/modules/module3-ai-brain/chapter4-navigation/"
+    "permalink": "/docs/modules/module3-ai-brain/chapter4-navigation/"
   }
 }

@@ -5,7 +5,7 @@
   "source": "@site/docs/modules/module3-ai-brain/preface.md",
   "sourceDirName": "modules/module3-ai-brain",
   "slug": "/modules/module3-ai-brain/preface",
-  "permalink": "/hackathon-book/docs/modules/module3-ai-brain/preface",
+  "permalink": "/docs/modules/module3-ai-brain/preface",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/modules/module3-ai-brain/preface.md",
@@ -15,10 +15,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Chapter 5: Environment & Scenario Building",
-    "permalink": "/hackathon-book/docs/modules/module2-digital-twin/chapter5-environment-building/"
+    "permalink": "/docs/modules/module2-digital-twin/chapter5-environment-building/"
   },
   "next": {
     "title": "Module 3: AI Brain - NVIDIA Isaac & Perception Systems",
-    "permalink": "/hackathon-book/docs/modules/module3-ai-brain/preface"
+    "permalink": "/docs/modules/module3-ai-brain/preface"
   }
 }
