@@ -4,43 +4,28 @@
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Physical AI & Humanoid Robotics',
-  tagline: 'A Comprehensive Guide to ROS 2, Gazebo, Unity, NVIDIA Isaac, and VLA Technologies',
+  tagline:
+    'A Comprehensive Guide to ROS 2, Gazebo, Unity, NVIDIA Isaac, and VLA Technologies',
   favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
+  // Production URL
   url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub Pages: https://<USERNAME>.github.io/<REPO>/
   baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  // GitHub Pages deployment
+  organizationName: 'your-github-username',
+  projectName: 'hackathon-book',
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
 
-  plugins: [
-    async function myPlugin(context, options) {
-      return {
-        name: 'postcss-plugin',
-        configurePostCss(postcssOptions) {
-          // Appends new PostCSS plugins
-          postcssOptions.plugins.push(require('autoprefixer'));
-          return postcssOptions;
-        },
-      };
-    },
-  ],
+  plugins: [],
+
   presets: [
     [
       'classic',
@@ -48,12 +33,10 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/your-github-username/hackathon-book',
         },
-        blog: false, // Optional: disable the blog plugin
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -64,13 +47,13 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
       image: 'img/physical-ai-humanoid-robotics.svg',
+
       navbar: {
         title: 'Physical AI Book',
         logo: {
           alt: 'Physical AI & Humanoid Robotics Logo',
-          src: 'img/logo.svg', // You can add a logo here
+          src: 'img/logo.svg',
         },
         items: [
           {
@@ -80,12 +63,13 @@ const config = {
             label: 'Modules',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/your-github-username/hackathon-book',
             label: 'GitHub',
             position: 'right',
           },
         ],
       },
+
       footer: {
         style: 'dark',
         links: [
@@ -114,16 +98,12 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discord.gg/',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/',
               },
             ],
           },
@@ -132,13 +112,15 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href:
+                  'https://github.com/your-github-username/hackathon-book',
               },
             ],
           },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Physical AI & Humanoid Robotics Book. Built with Docusaurus.`,
       },
+
       prism: {
         theme: require('prism-react-renderer/themes/github'),
         darkTheme: require('prism-react-renderer/themes/dracula'),

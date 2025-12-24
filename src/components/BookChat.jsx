@@ -22,12 +22,13 @@ const BookChat = () => {
   const handleSendMessage = async () => {
     if (!inputValue.trim() || isLoading) return;
 
-    // Add user message to chat
+    // Add user message to chat using the new schema
     const userMessage = {
       id: Date.now(),
-      text: inputValue,
+      content: inputValue,
       sender: 'user',
-      timestamp: new Date()
+      timestamp: new Date(),
+      language: targetLanguage
     };
 
     setMessages(prev => [...prev, userMessage]);
@@ -90,13 +91,15 @@ const BookChat = () => {
         throw new Error('Invalid JSON response from server');
       }
 
-      // Add AI response to chat
+      // Add AI response to chat using the new schema
       const aiMessage = {
         id: Date.now() + 1,
-        text: data.response,
+        content: data.response,
         sender: 'ai',
         citations: data.citations,
-        timestamp: new Date()
+        timestamp: new Date(),
+        language: targetLanguage,
+        confidence: data.confidence || 'high' // Default to high if not provided
       };
 
       setMessages(prev => [...prev, aiMessage]);
@@ -104,9 +107,10 @@ const BookChat = () => {
     } catch (error) {
       const errorMessage = {
         id: Date.now() + 1,
-        text: `Error: ${error.message}`,
+        content: `Error: ${error.message}`,
         sender: 'system',
-        timestamp: new Date()
+        timestamp: new Date(),
+        language: targetLanguage
       };
       setMessages(prev => [...prev, errorMessage]);
     } finally {
@@ -142,7 +146,7 @@ const BookChat = () => {
   };
 
   return (
-    <div className="book-chat-wrapper" role="main" aria-label="Book Assistant Chat Interface">
+    <div className={`book-chat-widget ${targetLanguage === 'ur' ? 'rtl-language' : ''}`} role="main" aria-label="Book Assistant Chat Interface">
       {/* Header with language selector */}
       <div className="chat-header">
         <div className="chat-header-content">
@@ -189,11 +193,11 @@ const BookChat = () => {
           messages.map((message) => (
             <div
               key={message.id}
-              className={`message-container ${message.sender === 'user' ? 'user-message' : 'ai-message'}`}
+              className={`message-container ${message.sender === 'user' ? 'user-message' : message.sender === 'system' ? 'system-message' : 'ai-message'} ${targetLanguage === 'ur' ? 'rtl-message' : ''}`}
             >
-              <div className={`message-bubble ${message.sender === 'user' ? 'user-bubble' : 'ai-bubble'}`}>
+              <div className={`message-bubble ${message.sender === 'user' ? 'user-bubble' : message.sender === 'system' ? 'system-bubble' : 'ai-bubble'}`}>
                 <div className="message-text">
-                  {formatText(message.text)}
+                  {formatText(message.content || message.text)}
                 </div>
                 {message.citations && message.citations.length > 0 && (
                   <div className="message-citations">
@@ -229,6 +233,11 @@ const BookChat = () => {
                         </li>
                       ))}
                     </ul>
+                  </div>
+                )}
+                {message.confidence && (
+                  <div className="message-confidence" title={`Confidence: ${message.confidence}`}>
+                    <span className={`confidence-indicator confidence-${message.confidence}`}></span>
                   </div>
                 )}
               </div>

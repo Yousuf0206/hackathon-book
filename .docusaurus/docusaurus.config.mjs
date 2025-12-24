@@ -9,8 +9,8 @@ export default {
   "favicon": "img/favicon.ico",
   "url": "https://your-docusaurus-site.example.com",
   "baseUrl": "/",
-  "organizationName": "facebook",
-  "projectName": "docusaurus",
+  "organizationName": "your-github-username",
+  "projectName": "hackathon-book",
   "onBrokenLinks": "warn",
   "i18n": {
     "defaultLocale": "en",
@@ -20,16 +20,14 @@ export default {
     "path": "i18n",
     "localeConfigs": {}
   },
-  "plugins": [
-    null
-  ],
+  "plugins": [],
   "presets": [
     [
       "classic",
       {
         "docs": {
           "sidebarPath": "C:\\Users\\user\\Desktop\\hackathon-book\\sidebars.js",
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
+          "editUrl": "https://github.com/your-github-username/hackathon-book"
         },
         "blog": false,
         "theme": {
@@ -54,7 +52,7 @@ export default {
           "label": "Modules"
         },
         {
-          "href": "https://github.com/facebook/docusaurus",
+          "href": "https://github.com/your-github-username/hackathon-book",
           "label": "GitHub",
           "position": "right"
         }
@@ -89,16 +87,12 @@ export default {
           "title": "Community",
           "items": [
             {
-              "label": "Stack Overflow",
-              "href": "https://stackoverflow.com/questions/tagged/docusaurus"
-            },
-            {
               "label": "Discord",
-              "href": "https://discordapp.com/invite/docusaurus"
+              "href": "https://discord.gg/"
             },
             {
               "label": "Twitter",
-              "href": "https://twitter.com/docusaurus"
+              "href": "https://twitter.com/"
             }
           ]
         },
@@ -107,7 +101,7 @@ export default {
           "items": [
             {
               "label": "GitHub",
-              "href": "https://github.com/facebook/docusaurus"
+              "href": "https://github.com/your-github-username/hackathon-book"
             }
           ]
         }

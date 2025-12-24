@@ -7,7 +7,9 @@
       "Bash(powershell -Command \"& ''.specify/scripts/powershell/setup-plan.ps1'' -Json\")",
       "Bash(powershell -Command \"& ''.specify/scripts/powershell/update-agent-context.ps1'' -AgentType claude\")",
       "Bash(powershell -Command \"& ''.specify/scripts/powershell/check-prerequisites.ps1'' -Json -RequireTasks -IncludeTasks\")",
-      "Bash(find . -name \"*.js*\" -exec grep -l \"Layout\\\\|layout\" {} ;)"
+      "Bash(find . -name \"*.js*\" -exec grep -l \"Layout\\\\|layout\" {} ;)",
+      "Bash(npx docusaurus start --port 5000)",
+      "Bash(dir C:UsersuserDesktophackathon-booktailwind*.js)"
     ]
   }
 }

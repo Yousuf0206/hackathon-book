@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import Link from '@docusaurus/Link';
-import CorporateBanner from '../components/CorporateBanner';
-import CorporateFeatures from '../components/CorporateFeatures';
-import CorporateStats from '../components/CorporateStats';
-import LearningPaths from '../components/LearningPaths';
-import Testimonials from '../components/Testimonials';
-import HomepageFooter from '../components/HomepageFooter';
+
+// Homepage components
+import FuturisticHero from '../components/FuturisticHero.jsx';
+import FuturisticFeatures from '../components/FuturisticFeatures';
+import FuturisticTestimonials from '../components/FuturisticTestimonials';
+import EducationalPaths from '../components/EducationalPaths';
+import TechStack from '../components/TechStack';
+import AIAssistantPreview from '../components/AIAssistantPreview';
+import EducationalRoadmap from '../components/EducationalRoadmap';
+import FuturisticCTA from '../components/FuturisticCTA';
+import ModernFooter from '../components/ModernFooter';
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
@@ -16,103 +20,109 @@ export default function Home() {
   const [authData, setAuthData] = useState({
     email: '',
     password: '',
-    name: ''
+    name: '',
   });
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setAuthData(prev => ({
+    setAuthData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleAuthSubmit = (e) => {
     e.preventDefault();
-    // In a real implementation, this would call your auth API
-    console.log(isLogin ? 'Login attempt' : 'Registration attempt', authData);
+    console.log(
+      isLogin ? 'Login attempt' : 'Registration attempt',
+      authData
+    );
     setShowAuthModal(false);
   };
 
   return (
     <Layout
-      title={`${siteConfig.title}`}
-      description="A Comprehensive Guide to Physical AI & Humanoid Robotics">
-      {/* Authentication Modal */}
+      title={siteConfig.title}
+      description="A Comprehensive Guide to Physical AI & Humanoid Robotics"
+    >
+      {/* AUTH MODAL */}
       {showAuthModal && (
-        <div className="auth-modal-overlay" onClick={() => setShowAuthModal(false)}>
-          <div className="auth-modal-content" onClick={(e) => e.stopPropagation()}>
-            <div className="auth-modal-header">
+        <div className="authOverlay" onClick={() => setShowAuthModal(false)}>
+          <div
+            className="authModal"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <header className="authHeader">
               <h2>{isLogin ? 'Sign In' : 'Create Account'}</h2>
-              <button className="close-auth-modal" onClick={() => setShowAuthModal(false)}>×</button>
-            </div>
-            <form onSubmit={handleAuthSubmit} className="auth-form">
+              <button
+                className="authClose"
+                onClick={() => setShowAuthModal(false)}
+              >
+                ×
+              </button>
+            </header>
+
+            <form onSubmit={handleAuthSubmit} className="authForm">
               {!isLogin && (
-                <div className="form-group">
-                  <label htmlFor="name">Full Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={authData.name}
-                    onChange={handleInputChange}
-                    required={!isLogin}
-                    className="auth-input"
-                  />
-                </div>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Full Name"
+                  value={authData.name}
+                  onChange={handleInputChange}
+                  required
+                />
               )}
-              <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={authData.email}
-                  onChange={handleInputChange}
-                  required
-                  className="auth-input"
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="password">Password</label>
-                <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  value={authData.password}
-                  onChange={handleInputChange}
-                  required
-                  minLength="6"
-                  className="auth-input"
-                />
-              </div>
-              <button type="submit" className="auth-submit-button">
+
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={authData.email}
+                onChange={handleInputChange}
+                required
+              />
+
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                value={authData.password}
+                onChange={handleInputChange}
+                required
+                minLength={6}
+              />
+
+              <button type="submit">
                 {isLogin ? 'Sign In' : 'Create Account'}
               </button>
             </form>
-            <div className="auth-switch">
-              <p>
-                {isLogin ? "Don't have an account?" : "Already have an account?"}{' '}
-                <button
-                  className="auth-switch-link"
-                  onClick={() => setIsLogin(!isLogin)}
-                >
-                  {isLogin ? 'Sign Up' : 'Sign In'}
-                </button>
-              </p>
-            </div>
+
+            <p className="authSwitch">
+              {isLogin
+                ? "Don't have an account?"
+                : 'Already have an account?'}{' '}
+              <span onClick={() => setIsLogin(!isLogin)}>
+                {isLogin ? 'Sign Up' : 'Sign In'}
+              </span>
+            </p>
           </div>
         </div>
       )}
 
-      <main className="home-main">
-        <CorporateBanner />
-        <CorporateFeatures />
-        <LearningPaths />
-        <Testimonials />
-        <CorporateStats />
+      {/* MAIN CONTENT */}
+      <main className="homepage">
+        <FuturisticHero />
+        <FuturisticFeatures />
+        <FuturisticTestimonials />
+        <EducationalPaths />
+        <TechStack />
+        <AIAssistantPreview />
+        <EducationalRoadmap />
+        <FuturisticCTA />
       </main>
-      <HomepageFooter />
+
+      <ModernFooter />
     </Layout>
   );
 }
