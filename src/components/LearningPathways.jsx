@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './component-styles.css';
 
 const LearningPathways = () => {
   const [selectedPath, setSelectedPath] = useState(0);
@@ -76,52 +77,49 @@ const LearningPathways = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
+    <section className="robotic-learning-pathways-section">
+      <div className="robotic-learning-pathways-container">
+        <div className="robotic-learning-pathways-header">
+          <h2 className="robotic-learning-pathways-title">
             Choose Your Learning Path
           </h2>
-          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+          <p className="robotic-learning-pathways-subtitle">
             Tailored learning paths to match your skill level and career goals
           </p>
         </div>
 
         {/* Learning Path Selection */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <div className="robotic-learning-path-grid">
           {learningPaths.map((path, index) => (
             <div
               key={index}
               onClick={() => setSelectedPath(index)}
-              className={`cursor-pointer p-6 rounded-2xl border-2 transition-all duration-300 ${
-                selectedPath === index
-                  ? 'border-cyan-500 bg-white/80 dark:bg-slate-800/60 shadow-xl'
-                  : 'border-transparent bg-white/60 dark:bg-slate-800/40 hover:bg-white/80 dark:hover:bg-slate-800/60'
-              }`}
+              className={`robotic-learning-path-card ${selectedPath === index ? 'selected' : ''}`}
             >
-              <div className="flex items-center mb-4">
-                <div className={`text-3xl mr-4 bg-gradient-to-r ${path.color} bg-clip-text text-transparent`}>
+              <div className="absolute inset-0 bg-gradient-to-br-cyan-purple opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+              <div className="relative z-10">
+                <div className={`robotic-path-icon text-4xl mb-6 bg-gradient-to-r ${path.color} bg-clip-text text-transparent`}>
                   {path.icon}
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white">
+                <div className="robotic-path-info">
+                  <h3 className="robotic-path-title">
                     {path.title}
                   </h3>
-                  <div className="flex items-center">
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                      path.level === 'Beginner' ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300' :
-                      path.level === 'Intermediate' ? 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300' :
-                      'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300'
+                  <div className="robotic-path-meta">
+                    <span className={`robotic-path-level px-3 py-1 rounded-full text-xs font-medium ${
+                      path.level === 'Beginner' ? 'bg-gradient-to-r-green-teal-stats text-green-800 dark:bg-gradient-to-r-green-teal-stats dark:text-green-300' :
+                      path.level === 'Intermediate' ? 'bg-gradient-to-r-blue-cyan-stats text-blue-800 dark:bg-gradient-to-r-blue-cyan-stats dark:text-blue-300' :
+                      'bg-gradient-to-r-purple-pink-stats text-purple-800 dark:bg-gradient-to-r-purple-pink-stats dark:text-purple-300'
                     }`}>
                       {path.level}
                     </span>
-                    <span className="ml-2 text-slate-500 dark:text-slate-400 text-sm">
+                    <span className="robotic-path-duration ml-3 text-slate-500 dark:text-slate-400 text-sm">
                       {path.duration}
                     </span>
                   </div>
                 </div>
               </div>
-              <p className="text-slate-600 dark:text-slate-400 text-sm">
+              <p className="robotic-path-description text-slate-600 dark:text-slate-400 text-sm mt-4">
                 {path.description}
               </p>
             </div>
@@ -129,76 +127,80 @@ const LearningPathways = () => {
         </div>
 
         {/* Selected Path Details */}
-        <div className="bg-white/80 dark:bg-slate-800/60 backdrop-blur-lg rounded-3xl p-10 shadow-2xl border border-white/20 dark:border-slate-700/50 mb-16">
-          <div className="text-center mb-8">
-            <div className={`inline-block text-6xl mb-4 bg-gradient-to-r ${learningPaths[selectedPath].color} bg-clip-text text-transparent`}>
-              {learningPaths[selectedPath].icon}
+        <div className="robotic-selected-path-container bg-slate-800-60 backdrop-blur-xl rounded-3xl p-10 shadow-2xl border border-white-20 dark:border-slate-700-50 mb-16">
+          <div className="robotic-selected-path-content">
+            <div className="robotic-selected-path-header text-center mb-12">
+              <div className={`robotic-selected-path-icon-large inline-block text-7xl mb-6 bg-gradient-to-r ${learningPaths[selectedPath].color} bg-clip-text text-transparent`}>
+                {learningPaths[selectedPath].icon}
+              </div>
+              <h3 className="robotic-selected-path-title-large text-4xl font-bold text-slate-900 dark:text-white mb-4">
+                {learningPaths[selectedPath].title}
+              </h3>
+              <p className="robotic-selected-path-description-large text-xl text-slate-600 dark:text-slate-300">
+                {learningPaths[selectedPath].description}
+              </p>
             </div>
-            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">
-              {learningPaths[selectedPath].title}
-            </h3>
-            <p className="text-xl text-slate-600 dark:text-slate-300">
-              {learningPaths[selectedPath].description}
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-4">
-                Learning Modules
-              </h4>
-              <ul className="space-y-3">
-                {learningPaths[selectedPath].modules.map((module, index) => (
-                  <li key={index} className="flex items-center">
-                    <div className="w-2 h-2 bg-cyan-500 rounded-full mr-3"></div>
-                    <span className="text-slate-700 dark:text-slate-300">{module}</span>
+            <div className="robotic-selected-path-details-grid grid grid-cols-1 md:grid-cols-2 gap-12">
+              <div className="robotic-modules-section">
+                <h4 className="robotic-section-title text-2xl font-bold text-slate-900 dark:text-white mb-6 relative inline-block">
+                  Learning Modules
+                  <div className="absolute bottom-0 left-0 w-12 h-1 bg-gradient-to-r-cyan-blue-stats"></div>
+                </h4>
+                <ul className="robotic-modules-list space-y-4">
+                  {learningPaths[selectedPath].modules.map((module, index) => (
+                    <li key={index} className="robotic-module-item flex items-start p-4 rounded-xl bg-slate-700-20 hover:bg-slate-700-30 transition-all duration-300 group">
+                      <div className="w-3 h-3 bg-gradient-to-r-cyan-blue-stats rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                      <span className="robotic-module-text text-slate-700 dark:text-slate-300 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors duration-300">{module}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="robotic-achievements-section">
+                <h4 className="robotic-section-title text-2xl font-bold text-slate-900 dark:text-white mb-6 relative inline-block">
+                  What You'll Achieve
+                  <div className="absolute bottom-0 left-0 w-12 h-1 bg-gradient-to-r-purple-pink-stats"></div>
+                </h4>
+                <ul className="robotic-achievements-list space-y-4">
+                  <li className="robotic-achievement-item flex items-start p-4 rounded-xl bg-slate-700-20 hover:bg-slate-700-30 transition-all duration-300 group">
+                    <div className="w-3 h-3 bg-gradient-to-r-green-teal-stats rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                    <span className="robotic-achievement-text text-slate-700 dark:text-slate-300 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors duration-300">Build complete robotic systems</span>
                   </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-4">
-                What You'll Achieve
-              </h4>
-              <div className="space-y-3">
-                <div className="flex items-start">
-                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3"></div>
-                  <span className="text-slate-700 dark:text-slate-300">Build complete robotic systems</span>
-                </div>
-                <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3"></div>
-                  <span className="text-slate-700 dark:text-slate-300">Deploy AI models on real hardware</span>
-                </div>
-                <div className="flex items-start">
-                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3"></div>
-                  <span className="text-slate-700 dark:text-slate-300">Create autonomous applications</span>
-                </div>
+                  <li className="robotic-achievement-item flex items-start p-4 rounded-xl bg-slate-700-20 hover:bg-slate-700-30 transition-all duration-300 group">
+                    <div className="w-3 h-3 bg-gradient-to-r-blue-cyan-stats rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                    <span className="robotic-achievement-text text-slate-700 dark:text-slate-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">Deploy AI models on real hardware</span>
+                  </li>
+                  <li className="robotic-achievement-item flex items-start p-4 rounded-xl bg-slate-700-20 hover:bg-slate-700-30 transition-all duration-300 group">
+                    <div className="w-3 h-3 bg-gradient-to-r-purple-pink-stats rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                    <span className="robotic-achievement-text text-slate-700 dark:text-slate-300 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">Create autonomous applications</span>
+                  </li>
+                </ul>
               </div>
             </div>
-          </div>
 
-          <div className="text-center mt-8">
-            <button className={`px-8 py-4 bg-gradient-to-r ${learningPaths[selectedPath].color} text-white font-semibold rounded-xl hover:shadow-lg transition-shadow duration-300`}>
-              Start Learning Path
-            </button>
+            <div className="text-center mt-12">
+              <button className={`robotic-start-path-button px-10 py-4 bg-gradient-to-r ${learningPaths[selectedPath].color} text-white font-bold rounded-2xl text-lg hover:shadow-2xl hover:shadow-cyan-500/30 transition-all duration-300 transform hover:scale-105`}>
+                Start Learning Path
+              </button>
+            </div>
           </div>
         </div>
 
         {/* Learning Resources */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="robotic-resources-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {resources.map((resource, index) => (
             <div
               key={index}
-              className="bg-white/80 dark:bg-slate-800/60 backdrop-blur-lg rounded-2xl p-6 shadow-xl border border-white/20 dark:border-slate-700/50 text-center hover:-translate-y-2 transition-transform duration-300"
+              className="robotic-resource-card bg-slate-800-40 backdrop-blur-lg rounded-2xl p-8 shadow-xl border border-white-20 dark:border-slate-700-50 text-center hover:-translate-y-2 transition-transform duration-300 group"
             >
-              <div className="text-4xl mb-4">{resource.icon}</div>
-              <div className="text-2xl font-bold bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent mb-2">
+              <div className="robotic-resource-icon text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">{resource.icon}</div>
+              <div className="robotic-resource-count text-4xl font-bold bg-gradient-to-r-cyan-blue-stats bg-clip-text text-transparent mb-4">
                 {resource.count}
               </div>
-              <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2">
+              <h4 className="robotic-resource-title text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
                 {resource.title}
               </h4>
-              <p className="text-slate-600 dark:text-slate-400 text-sm">
+              <p className="robotic-resource-description text-slate-600 dark:text-slate-400">
                 {resource.description}
               </p>
             </div>

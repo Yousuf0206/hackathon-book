@@ -1,5 +1,5 @@
 """
-Service for handling chat interactions and question answering using OpenAI.
+Service for handling chat interactions and question answering using OpenRouter.
 """
 import openai
 from openai import APIError, AuthenticationError, RateLimitError
@@ -17,11 +17,11 @@ class ChatService:
     Service class for handling chat interactions and question answering.
     """
     def __init__(self):
-        api_key = os.getenv("OPENAI_API_KEY")
+        api_key = os.getenv("OPENROUTER_API_KEY")
         if not api_key:
-            raise ValueError("OPENAI_API_KEY environment variable is required")
+            raise ValueError("OPENROUTER_API_KEY environment variable is required")
 
-        # The API key will be passed when creating the OpenAI client
+        # The API key will be passed when creating the OpenRouter client
 
         # Initialize other required services
         self.embedding_service = EmbeddingService()
@@ -253,10 +253,13 @@ class ChatService:
                 """
 
         try:
-            # Call OpenAI API to generate response
-            client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+            # Call OpenRouter API to generate response
+            client = openai.OpenAI(
+                api_key=os.getenv("OPENROUTER_API_KEY"),
+                base_url="https://openrouter.ai/api/v1"
+            )
             response = client.chat.completions.create(
-                model="gpt-3.5-turbo",  # You might want to use gpt-4 for better results
+                model="openai/gpt-3.5-turbo",  # Using OpenRouter's model identifier
                 messages=[
                     {"role": "system", "content": system_message},
                     {"role": "user", "content": prompt}
@@ -300,19 +303,19 @@ class ChatService:
                 "citations": citations
             }
         except APIError as e:
-            # Handle OpenAI API errors specifically
+            # Handle OpenRouter API errors specifically
             error_msg = f"Sorry, there was an issue with the AI service: {str(e)}"
-            print(f"OpenAI API Error: {error_msg}")  # Log the error
+            print(f"OpenRouter API Error: {error_msg}")  # Log the error
             return self._generate_fallback_response(query, context_chunks, error_msg)
         except AuthenticationError as e:
             # Handle authentication errors
             error_msg = "Sorry, there's an issue with the AI service configuration. Please contact the administrator."
-            print(f"OpenAI Authentication Error: {str(e)}")  # Log the error
+            print(f"OpenRouter Authentication Error: {str(e)}")  # Log the error
             return self._generate_fallback_response(query, context_chunks, error_msg)
         except RateLimitError as e:
             # Handle rate limit errors
             error_msg = "Sorry, we've reached the rate limit for the AI service. Please try again in a moment."
-            print(f"OpenAI Rate Limit Error: {str(e)}")  # Log the error
+            print(f"OpenRouter Rate Limit Error: {str(e)}")  # Log the error
             return self._generate_fallback_response(query, context_chunks, error_msg)
         except Exception as e:
             # Handle any other errors in AI generation

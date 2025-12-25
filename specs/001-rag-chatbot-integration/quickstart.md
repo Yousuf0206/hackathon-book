@@ -4,7 +4,7 @@
 - Python 3.11+
 - Node.js 18+ (for Docusaurus frontend)
 - Cohere API key
-- OpenAI API key
+- OpenRouter API key
 - Qdrant Cloud account
 - Neon Postgres account
 
@@ -19,7 +19,7 @@
 2. **Set environment variables**:
    ```bash
    export COHERE_API_KEY="your-cohere-key"
-   export OPENAI_API_KEY="your-openai-key"
+   export OPENROUTER_API_KEY="your-openrouter-key"
    export QDRANT_URL="your-qdrant-url"
    export QDRANT_API_KEY="your-qdrant-key"
    export DATABASE_URL="your-neon-postgres-url"

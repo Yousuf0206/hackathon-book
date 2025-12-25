@@ -6,10 +6,8 @@ import Layout from '@theme/Layout';
 import FuturisticHero from '../components/FuturisticHero.jsx';
 import FuturisticFeatures from '../components/FuturisticFeatures';
 import FuturisticTestimonials from '../components/FuturisticTestimonials';
-import EducationalPaths from '../components/EducationalPaths';
 import TechStack from '../components/TechStack';
 import AIAssistantPreview from '../components/AIAssistantPreview';
-import EducationalRoadmap from '../components/EducationalRoadmap';
 import FuturisticCTA from '../components/FuturisticCTA';
 import ModernFooter from '../components/ModernFooter';
 
@@ -115,10 +113,8 @@ export default function Home() {
         <FuturisticHero />
         <FuturisticFeatures />
         <FuturisticTestimonials />
-        <EducationalPaths />
         <TechStack />
         <AIAssistantPreview />
-        <EducationalRoadmap />
         <FuturisticCTA />
       </main>
 

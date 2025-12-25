@@ -20,7 +20,7 @@ pip install -r requirements.txt
 ### 2. Set Environment Variables
 Create a `.env` file in the `backend` directory:
 ```env
-OPENAI_API_KEY=your_openai_api_key_here
+OPENROUTER_API_KEY=your_openrouter_api_key_here
 AUTH_SECRET_KEY=your_secret_key_for_jwt_tokens
 ACCESS_TOKEN_EXPIRE_MINUTES=30
 DATABASE_PATH=users.db

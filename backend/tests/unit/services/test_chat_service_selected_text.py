@@ -1,5 +1,5 @@
 """
-Unit tests for selected-text question answering functionality in chat service.
+Unit tests for selected-text question answering functionality in chat service using OpenRouter.
 """
 import pytest
 from unittest.mock import Mock, patch
@@ -13,7 +13,7 @@ class TestChatServiceSelectedText:
     @patch('backend.src.services.chat_service.EmbeddingService')
     @patch('backend.src.services.chat_service.RetrievalService')
     def test_process_query_with_selected_text(self, mock_retrieval_service, mock_embedding_service, mock_openai_class):
-        """Test processing a query with selected text context."""
+        """Test processing a query with selected text context using OpenRouter."""
         # Setup
         chat_service = ChatService()
 
@@ -59,7 +59,7 @@ class TestChatServiceSelectedText:
     @patch('backend.src.services.chat_service.EmbeddingService')
     @patch('backend.src.services.chat_service.RetrievalService')
     def test_process_query_without_selected_text(self, mock_retrieval_service, mock_embedding_service, mock_openai_class):
-        """Test processing a query without selected text (normal mode)."""
+        """Test processing a query without selected text (normal mode) using OpenRouter."""
         # Setup
         chat_service = ChatService()
 

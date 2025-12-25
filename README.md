@@ -20,7 +20,7 @@ The system consists of:
 - **Backend**: FastAPI-based API with multiple service layers
 - **Embedding Service**: Cohere integration for text embeddings
 - **Retrieval Service**: Qdrant vector database for semantic search
-- **Chat Service**: OpenAI integration for question answering
+- **Chat Service**: OpenRouter integration for question answering
 - **Content Service**: Web scraping and content processing
 
 ## Components
@@ -29,7 +29,7 @@ The system consists of:
 
 - `EmbeddingService`: Generates vector embeddings using Cohere API
 - `RetrievalService`: Handles vector search and storage in Qdrant
-- `ChatService`: Processes queries with OpenAI and generates responses
+- `ChatService`: Processes queries with OpenRouter and generates responses
 - `ContentService`: Scrapes and processes book content
 
 ### API Endpoints
@@ -54,7 +54,7 @@ The system consists of:
 - Node.js 16+
 - Docker (optional, for containerized deployment)
 - Cohere API key
-- OpenAI API key
+- OpenRouter API key
 - Qdrant Cloud account (or local instance)
 
 ### Environment Configuration
@@ -63,7 +63,7 @@ Create a `.env` file with the following variables:
 
 ```bash
 COHERE_API_KEY=your_cohere_api_key
-OPENAI_API_KEY=your_openai_api_key
+OPENROUTER_API_KEY=your_openrouter_api_key
 QDRANT_URL=your_qdrant_url
 QDRANT_API_KEY=your_qdrant_api_key  # if using cloud version
 ```

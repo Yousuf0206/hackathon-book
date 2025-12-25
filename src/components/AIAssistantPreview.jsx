@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './component-styles.css';
 
 const AIAssistantPreview = () => {
   const [messages, setMessages] = useState([
@@ -26,41 +27,33 @@ const AIAssistantPreview = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Interactive <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">AI</span> Assistant
+    <section className="ai-assistant-preview-section">
+      <div className="ai-assistant-preview-container">
+        <div className="ai-assistant-preview-header">
+          <h2 className="ai-assistant-preview-title">
+            Interactive <span style={{background: 'linear-gradient(135deg, var(--futuristic-cyan), var(--neon-purple))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>AI</span> Assistant
           </h2>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+          <p className="ai-assistant-preview-subtitle">
             Get instant answers to your questions about physical AI and humanoid robotics
           </p>
         </div>
 
-        <div className="bg-slate-800/40 backdrop-blur-sm rounded-2xl border border-slate-700/50 overflow-hidden">
-          <div className="p-6 border-b border-slate-700/50">
-            <div className="flex items-center space-x-3">
-              <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-              <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-              <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-              <span className="text-sm text-slate-400 ml-4">AI Assistant - Ready to help</span>
+        <div className="ai-assistant-chat-container">
+          <div className="ai-assistant-chat-header">
+            <div className="ai-assistant-header-content">
+              <div className="ai-assistant-status-indicator ai-assistant-status-green"></div>
+              <span className="ai-assistant-status-text">AI Assistant - Ready to help</span>
             </div>
           </div>
 
-          <div className="p-6 h-96 overflow-y-auto">
-            <div className="space-y-4">
+          <div className="ai-assistant-messages-container">
+            <div className="ai-assistant-messages-list">
               {messages.map((message, index) => (
                 <div
                   key={index}
-                  className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
+                  className={`ai-assistant-message-container ${message.type === 'user' ? 'ai-assistant-message-user' : 'ai-assistant-message-bot'}`}
                 >
-                  <div
-                    className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
-                      message.type === 'user'
-                        ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
-                        : 'bg-slate-700/50 text-slate-300'
-                    }`}
-                  >
+                  <div className="ai-assistant-message-bubble">
                     {message.text}
                   </div>
                 </div>
@@ -68,18 +61,18 @@ const AIAssistantPreview = () => {
             </div>
           </div>
 
-          <div className="p-6 border-t border-slate-700/50">
-            <form onSubmit={handleSendMessage} className="flex space-x-4">
+          <div className="ai-assistant-input-container">
+            <form onSubmit={handleSendMessage} className="ai-assistant-form">
               <input
                 type="text"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 placeholder="Ask about physical AI, robotics, or humanoid systems..."
-                className="flex-1 bg-slate-700/50 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="ai-assistant-input"
               />
               <button
                 type="submit"
-                className="px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-medium rounded-lg hover:shadow-lg transition-shadow duration-300"
+                className="ai-assistant-send-button"
               >
                 Send
               </button>
@@ -87,21 +80,21 @@ const AIAssistantPreview = () => {
           </div>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="text-center p-6 bg-slate-800/30 rounded-xl border border-slate-700/50">
-            <div className="text-2xl mb-3">🧠</div>
-            <h3 className="font-semibold text-white mb-2">Concept Explanations</h3>
-            <p className="text-sm text-slate-400">Get detailed explanations of complex robotics concepts</p>
+        <div className="ai-assistant-features-grid">
+          <div className="ai-assistant-feature-card">
+            <div className="ai-assistant-feature-icon">🧠</div>
+            <h3 className="ai-assistant-feature-title">Concept Explanations</h3>
+            <p className="ai-assistant-feature-description">Get detailed explanations of complex robotics concepts</p>
           </div>
-          <div className="text-center p-6 bg-slate-800/30 rounded-xl border border-slate-700/50">
-            <div className="text-2xl mb-3">📚</div>
-            <h3 className="font-semibold text-white mb-2">Curriculum Guidance</h3>
-            <p className="text-sm text-slate-400">Navigate through learning paths and modules</p>
+          <div className="ai-assistant-feature-card">
+            <div className="ai-assistant-feature-icon">📚</div>
+            <h3 className="ai-assistant-feature-title">Curriculum Guidance</h3>
+            <p className="ai-assistant-feature-description">Navigate through learning paths and modules</p>
           </div>
-          <div className="text-center p-6 bg-slate-800/30 rounded-xl border border-slate-700/50">
-            <div className="text-2xl mb-3">🔧</div>
-            <h3 className="font-semibold text-white mb-2">Technical Support</h3>
-            <p className="text-sm text-slate-400">Get help with implementation and troubleshooting</p>
+          <div className="ai-assistant-feature-card">
+            <div className="ai-assistant-feature-icon">🔧</div>
+            <h3 className="ai-assistant-feature-title">Technical Support</h3>
+            <p className="ai-assistant-feature-description">Get help with implementation and troubleshooting</p>
           </div>
         </div>
       </div>

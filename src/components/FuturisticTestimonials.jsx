@@ -39,8 +39,8 @@ const FuturisticTestimonials = () => {
     <section className="testimonials-section padding-top--xl padding-bottom--xl">
       <div className="container">
         <div className="text--center margin-bottom--lg">
-          <h2 className="section-title cyberpunk-title">What Experts Say</h2>
-          <p className="section-subtitle">Hear from industry leaders and researchers who have mastered humanoid robotics</p>
+          <h2 className="section-title cyberpunk-title">Expert Endorsements</h2>
+          <p className="section-subtitle">Join thousands of professionals advancing in AI and robotics</p>
         </div>
 
         <div className="testimonials-container">

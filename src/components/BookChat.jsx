@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import './component-styles.css';
 
 const BookChat = () => {
   const [messages, setMessages] = useState([]);
